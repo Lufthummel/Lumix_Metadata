@@ -47,7 +47,12 @@ function UpdateLumixMetadata.getPhotos()
 
             myLogger:trace( "-> "..  path .. " + " .. fname )
             tmpmeta = exiftool(path)
-            UpdateLumixMetadata.setMetadata(tmpmeta)
+
+            catalog:withWriteAccessDo( "UpdateMetada", function( context )
+                UpdateLumixMetadata.setMetadata(tmpmeta, photo)
+            end )
+
+
         end
     end)
 
@@ -58,14 +63,17 @@ function JSON:onDecodeError(message, text, location, etc)
                 LrErrors.throwUserError("Internal Error: invalid JSON data" .. message .. text)
 end
 
-function UpdateLumixMetadata.setMetadata(m)
+function UpdateLumixMetadata.setMetadata(m,p)
+
     myLogger:trace( "-> setMetadata")
+    local photo = p
     m =m:gsub("%["," ")
     m =m:gsub("%]"," ")
     myLogger:trace("-> Metadata " .. m)
 
     local meta = JSON:decode(m)
     myLogger:trace("-> Metadata Lookup " .. meta["ShutterType"])
+    photo:setPropertyForPlugin(_PLUGIN,"shutterType",meta["ShutterType"])
 
     for k, v in pairs( meta ) do
         myLogger:trace("-> Metadata " .. k .. " : " .. tostring(v))
