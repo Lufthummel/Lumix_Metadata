@@ -38,6 +38,6 @@ return {
 
 	LrMetadataProvider = 'LumixMetadataDefinitionFile.lua',
 
-	VERSION = { major=0, minor=1, revision=0, build=85}
+	VERSION = { major=0, minor=9, revision=1, build=37}
 
 }

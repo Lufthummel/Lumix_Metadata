@@ -14,18 +14,33 @@ local LrDialogs = import 'LrDialogs'
 local LrApplication = import 'LrApplication'
 local LrLogger = import 'LrLogger'
 local LrTasks = import 'LrTasks'
+local LrProgressScope = import 'LrProgressScope'
+local LrFunctionContext = import 'LrFunctionContext'
 
 local myLogger = LrLogger( 'libraryLogger' )
 myLogger:enable( "print" ) -- or "logfile"
 
 
+local updateProgress = {}
 
 UpdateLumixMetadata = {}
 
 function UpdateLumixMetadata.showUpdateDialog()
     -- body of function
-    LrDialogs.message( "Update Lumix Metadata", "Hello World!", "info" )
-     UpdateLumixMetadata.getPhotos()
+    -- LrDialogs.message( "Update Lumix Metadata", "Hello World!", "info" )
+
+    if (LrDialogs.confirm("Update Lumix Metadata","Do you want to update Metadata?","Sure","Cancel") == "ok")
+    then
+
+    -- enable progress bar
+
+        updateProgress = LrProgressScope({
+         title = "Update Lumix Metadata",
+        })
+        updateProgress:setCancelable(false)
+
+        UpdateLumixMetadata.getPhotos()
+    end
 end
 
 
@@ -34,29 +49,36 @@ function UpdateLumixMetadata.getPhotos()
     local path = ''
     local fname = ''
     local tmpmeta = ''
+    local t = 0
 
     myLogger:trace( "-> getPhotos")
     LrTasks.startAsyncTask(function ()
         local photos = catalog:getMultipleSelectedOrAllPhotos()
+        local totalphotos = #photos
 
-        myLogger:trace( "-> getPhotos:startIterating")
+
+        updateProgress:setPortionComplete(t, totalphotos)
+
+        myLogger:trace( "-> getPhotos:startIterating, # " .. totalphotos)
 
         for p,photo in ipairs(photos) do
+            t = t +1
             path = photo:getRawMetadata("path")
             fname = photo:getFormattedMetadata("fileName")
 
-            myLogger:trace( "-> "..  path .. " + " .. fname )
+            -- myLogger:trace( "-> "..  path .. " + " .. fname )
             tmpmeta = exiftool(path)
 
             catalog:withWriteAccessDo( "UpdateMetada", function( context )
                 UpdateLumixMetadata.setMetadata(tmpmeta, photo)
-            end )
-
-
+                myLogger:trace( "-> updated")
+            end)
+            myLogger:trace( "updated" .. t)
+            updateProgress:setPortionComplete(t, totalphotos)
         end
     end)
 
-
+    updateProgress:done()
 end
 
 function JSON:onDecodeError(message, text, location, etc)
@@ -74,12 +96,14 @@ function UpdateLumixMetadata.setMetadata(m,p)
     local meta = JSON:decode(m)
     myLogger:trace("-> Metadata Lookup " .. meta["ShutterType"])
     photo:setPropertyForPlugin(_PLUGIN,"shutterType",meta["ShutterType"])
-
-    for k, v in pairs( meta ) do
-        myLogger:trace("-> Metadata " .. k .. " : " .. tostring(v))
-    end
-
-
+    photo:setPropertyForPlugin(_PLUGIN,"firmwareVersion",tostring(meta["FirmwareVersion"]))
+    photo:setPropertyForPlugin(_PLUGIN,"internalSerialNumber",tostring(meta["InternalSerialNumber"]))
+    photo:setPropertyForPlugin(_PLUGIN,"lensFirmwareVersion",tostring(meta["LensFirmwareVersion"]))
+    photo:setPropertyForPlugin(_PLUGIN,"lensSerialNumber",tostring(meta["LensSerialNumber"]))
+    photo:setPropertyForPlugin(_PLUGIN,"aFPointPosition",tostring(meta["AFPointPosition"]))
+    photo:setPropertyForPlugin(_PLUGIN,"focusMode",tostring(meta["FocusMode"]))
+    photo:setPropertyForPlugin(_PLUGIN,"aFAreaMode",tostring(meta["AFAreaMode"]))
+    photo:setPropertyForPlugin(_PLUGIN,"burstSpeed","Burst -> ".. tostring(meta["BurstSpeed"]))
 end
 
 UpdateLumixMetadata.showUpdateDialog()
