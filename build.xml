@@ -23,8 +23,8 @@
     <property name="pluginFolder" location="${build}/${pluginFolderName}"/>
     <property name="pluginDeploymentUnit"  location="${dist}/${pluginFolderName}.zip"/>
 
-    <property name="lrPluginFolder" location="/Users/imac/Library/Application Support/Adobe/Lightroom/Modules"/>
-    <property name="luac" location="/opt/local/bin/luac"/>
+    <property name="lrPluginFolder" location="/Users/hkremmin/Library/Application Support/Adobe/Lightroom/Modules"/>
+    <property name="luac" location="/usr/local/bin/luac"/>
 
     <target name="clean">
         <delete dir="${build}"/>

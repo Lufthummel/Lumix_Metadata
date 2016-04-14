@@ -94,16 +94,18 @@ function UpdateLumixMetadata.setMetadata(m,p)
     myLogger:trace("-> Metadata " .. m)
 
     local meta = JSON:decode(m)
-    myLogger:trace("-> Metadata Lookup " .. meta["ShutterType"])
-    photo:setPropertyForPlugin(_PLUGIN,"shutterType",meta["ShutterType"])
-    photo:setPropertyForPlugin(_PLUGIN,"firmwareVersion",tostring(meta["FirmwareVersion"]))
-    photo:setPropertyForPlugin(_PLUGIN,"internalSerialNumber",tostring(meta["InternalSerialNumber"]))
-    photo:setPropertyForPlugin(_PLUGIN,"lensFirmwareVersion",tostring(meta["LensFirmwareVersion"]))
-    photo:setPropertyForPlugin(_PLUGIN,"lensSerialNumber",tostring(meta["LensSerialNumber"]))
-    photo:setPropertyForPlugin(_PLUGIN,"aFPointPosition",tostring(meta["AFPointPosition"]))
-    photo:setPropertyForPlugin(_PLUGIN,"focusMode",tostring(meta["FocusMode"]))
-    photo:setPropertyForPlugin(_PLUGIN,"aFAreaMode",tostring(meta["AFAreaMode"]))
-    photo:setPropertyForPlugin(_PLUGIN,"burstSpeed","Burst -> ".. tostring(meta["BurstSpeed"]))
+    if (meta ~= nil ) then
+            -- myLogger:trace("-> Metadata Lookup " .. meta["ShutterType"])
+            if (meta["ShutterType"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"shutterType",meta["ShutterType"]) end
+            if (meta["FirmwareVersion"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"firmwareVersion",tostring(meta["FirmwareVersion"])) end
+            if (meta["InternalSerialNumber"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"internalSerialNumber",tostring(meta["InternalSerialNumber"])) end
+            if (meta["LensFirmwareVersion"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"lensFirmwareVersion",tostring(meta["LensFirmwareVersion"])) end
+            if (meta["LensSerialNumber"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"lensSerialNumber",tostring(meta["LensSerialNumber"])) end
+            if (meta["AFPointPosition"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"aFPointPosition",tostring(meta["AFPointPosition"])) end
+            if (meta["FocusMode"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"focusMode",tostring(meta["FocusMode"])) end
+            if (meta["AFAreaMode"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"aFAreaMode",tostring(meta["AFAreaMode"])) end
+            if (meta["BurstSpeed"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"burstSpeed","Burst -> ".. tostring(meta["BurstSpeed"])) end
+        end
 end
 
 UpdateLumixMetadata.showUpdateDialog()

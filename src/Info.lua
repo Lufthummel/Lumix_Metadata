@@ -33,11 +33,16 @@ return {
 		enabledWhen = "photosSelected",
 	},
 	LrPluginName = "Lumix Metadata",
+
+	-- Add the Metadata Tagset File
+	LrMetadataTagsetFactory = {
+		'LumixMetadataTagset.lua'
+	},
 	
 
 
 	LrMetadataProvider = 'LumixMetadataDefinitionFile.lua',
 
-	VERSION = { major=0, minor=9, revision=2, build=86}
+	VERSION = { major=0, minor=9, revision=2, build=6}
 
 }
