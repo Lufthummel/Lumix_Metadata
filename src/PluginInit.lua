@@ -16,3 +16,11 @@ if (pluginPrefs.exiftool == nil) then
 else
     _G.EXIFTOOLPATH = pluginPrefs.exiftool
 end
+
+if (pluginPrefs.tmppath == nil) then
+
+    _G.TMPPATH = '/tmp/'
+
+else
+    _G.TMPPATH = pluginPrefs.tmppath
+end

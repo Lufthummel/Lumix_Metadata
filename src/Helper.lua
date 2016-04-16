@@ -54,9 +54,12 @@ function exiftool(file)
     local execpath = "/usr/local/bin/"
     local exec = "exiftool"
     local param = " -j -Panasonic:all "
-    local tmpfile ="/tmp/json.tmp"
+    -- local tmpfile ="/tmp/json.tmp"
+    local tmpfile =_G.TMPPATH .. "json.tmp"
+    myLogger:trace( "tmp: " .. tmpfile )
+    -- local cmd = execpath .. exec .. param ..'"' .. file ..'"' .. " > " .. tmpfile
+    cmd = _G.EXIFTOOLPATH .. param ..'"' .. file ..'"' .. " > " .. tmpfile
 
-    local cmd = execpath .. exec .. param ..'"' .. file ..'"' .. " > " .. tmpfile
     myLogger:trace( "Start ExifTool: " .. cmd )
     result = LrTasks.execute( cmd )
     myLogger:trace( "End ExifTool " .. result  )
