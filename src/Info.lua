@@ -38,11 +38,12 @@ return {
 	LrMetadataTagsetFactory = {
 		'LumixMetadataTagset.lua'
 	},
-	
 
+	LrPluginInfoProvider = 'PluginInfoProvider.lua',
+	LrInitPlugin = 'PluginInit.lua',
 
 	LrMetadataProvider = 'LumixMetadataDefinitionFile.lua',
 
-	VERSION = { major=0, minor=9, revision=2, build=6}
+	VERSION = { major=0, minor=9, revision=2, build=38}
 
 }

@@ -24,7 +24,7 @@ Hope it is useful.
 
 local LrTasks = import "LrTasks"
 local LrLogger = import 'LrLogger'
-
+local prefs = import 'LrPrefs'.prefsForPlugin()
 
 local myLogger = LrLogger( 'libraryLogger' )
 myLogger:enable( "print" ) -- or "logfile"
