@@ -104,8 +104,24 @@ function UpdateLumixMetadata.setMetadata(m,p)
             if (meta["AFPointPosition"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"aFPointPosition",tostring(meta["AFPointPosition"])) end
             if (meta["FocusMode"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"focusMode",tostring(meta["FocusMode"])) end
             if (meta["AFAreaMode"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"aFAreaMode",tostring(meta["AFAreaMode"])) end
-            if (meta["BurstSpeed"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"burstSpeed","Burst -> ".. tostring(meta["BurstSpeed"])) end
-        end
+            if (meta["BurstSpeed"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"burstSpeed",tostring(meta["BurstSpeed"]) .. " Images/s") end
+
+            if (meta["AccelerometerZ"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"accelerometerz",tostring(meta["AccelerometerZ"])) end
+            if (meta["AccelerometerX"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"accelerometerx",tostring(meta["AccelerometerX"])) end
+            if (meta["AccelerometerY"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"accelerometery",tostring(meta["AccelerometerY"])) end
+            if (meta["CameraOrientation"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"cameraorientation",tostring(meta["CameraOrientation"])) end
+            if (meta["RollAngle"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"rollangle",tostring(meta["RollAngle"])) end
+            if (meta["PitchAngle"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"pitchangle",tostring(meta["PitchAngle"])) end
+            if (meta["FlashFired"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"flashfired",tostring(meta["FlashFired"])) end
+            if (meta["FlashBias"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"flashbias",tostring(meta["FlashBias"])) end
+            if (meta["FlashCurtain"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"flashcurtain",tostring(meta["FlashCurtain"])) end
+            if (meta["LongExposureNoiseReduction"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"longExposurenoisereduction",tostring(meta["LongExposureNoiseReduction"])) end
+            if (meta["ImageStabilization"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"imagestabilization",tostring(meta["ImageStabilization"])) end
+            if (meta["TimeSincePowerOn"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"timesincepoweron",tostring(meta["TimeSincePowerOn"])) end
+
+
+
+    end
 end
 
 UpdateLumixMetadata.showUpdateDialog()

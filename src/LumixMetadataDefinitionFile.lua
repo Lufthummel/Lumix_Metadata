@@ -115,6 +115,126 @@ return {
 
 		},
 
+		{
+			id = 'accelerometerx',
+			title = LOC "$$$/LumixMetadata/AccelerometerX=Accel. X",
+			dataType = 'string',
+			searchable = false,
+			browsable = false,
+			version = 1,
+
+		},
+
+		{
+			id = 'accelerometery',
+			title = LOC "$$$/LumixMetadata/AccelerometerY=Accel. Y",
+			dataType = 'string',
+			searchable = false,
+			browsable = false,
+			version = 1,
+
+		},
+
+		{
+			id = 'accelerometerz',
+			title = LOC "$$$/LumixMetadata/AccelerometerY=Accel. Z",
+			dataType = 'string',
+			searchable = false,
+			browsable = false,
+			version = 1,
+
+		},
+
+		{
+			id = 'cameraorientation',
+			title = LOC "$$$/LumixMetadata/CameraOrientation=Cam Orientation",
+			dataType = 'string',
+			searchable = false,
+			browsable = false,
+			version = 1,
+
+		},
+
+		{
+			id = 'rollangle',
+			title = LOC "$$$/LumixMetadata/RollAngle=Roll Angle",
+			dataType = 'string',
+			searchable = false,
+			browsable = false,
+			version = 1,
+
+		},
+
+		{
+			id = 'pitchangle',
+			title = LOC "$$$/LumixMetadata/PitchAngle=Pitch Angle",
+			dataType = 'string',
+			searchable = false,
+			browsable = false,
+			version = 1,
+
+		},
+
+		{
+			id = 'longExposurenoisereduction',
+			title = LOC "$$$/LumixMetadata/LongExposureNoiseReduction=LE Noise Reduction",
+			dataType = 'string',
+			searchable = true,
+			browsable = true,
+			version = 1,
+
+		},
+
+		{
+			id = 'flashbias',
+			title = LOC "$$$/LumixMetadata/FlashBias=Flash Bias",
+			dataType = 'string',
+			searchable = false,
+			browsable = false,
+			version = 1,
+
+		},
+
+		{
+			id = 'flashcurtain',
+			title = LOC "$$$/LumixMetadata/FlashCurtain=Flash Curtain",
+			dataType = 'string',
+			searchable = false,
+			browsable = false,
+			version = 1,
+
+		},
+
+		{
+			id = 'flashfired',
+			title = LOC "$$$/LumixMetadata/FlashFired=Flash Fired",
+			dataType = 'string',
+			searchable = false,
+			browsable = false,
+			version = 1,
+
+		},
+
+		{
+			id = 'imagestabilization',
+			title = LOC "$$$/LumixMetadata/ImageStabilization=Stabilization",
+			dataType = 'string',
+			searchable = true,
+			browsable = true,
+			version = 1,
+
+		},
+
+		{
+			id = 'timesincepoweron',
+			title = LOC "$$$/LumixMetadata/TimeSincePowerOn=Time since PO",
+			dataType = 'string',
+			searchable = false,
+			browsable = false,
+			version = 1,
+
+		},
+
 	},
 	
 	schemaVersion = 1,
