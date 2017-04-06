@@ -10,3 +10,5 @@ Prerequisite:
 User Guide:
 
 tbd.
+
+Some tips in this discussion thread: https://www.dpreview.com/forums/thread/4042824
