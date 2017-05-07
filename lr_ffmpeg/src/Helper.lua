@@ -82,11 +82,37 @@ function exiftoolPath(file, outpath)
 
 end
 
-function ffmpeg(file, filename, outpath)
-    -- local ffmpegparam = " -compression_algo packbits -pix_fmt rgb24 "
-    local ffmpegparam = " -q:v 1 "
-    -- local extension ="%03d.tiff"
-    local extension ="%03d.jpg"
+function ffmpeg(file, filename, outpath, format)
+
+    local ffmpegparam = ""
+    local extension =""
+
+    local jpegparam = " -q:v 1 "
+    local bmpparam = " "
+    local pngparam = " "
+    local tiffparam = " -compression_algo packbits -pix_fmt rgb24 "
+    local tiff_extension ="%03d.tiff"
+    local jpeg_extension ="%03d.jpg"
+    local png_extension ="%03d.png"
+    local bmp_extension ="%03d.bmp"
+
+    -- lua kann kein switch...
+
+    if format == 'jpeg' then
+        ffmpegparam = jpegparam
+        extension = jpeg_extension
+    elseif format == 'tiff' then
+        ffmpegparam = tiffparam
+        extension = tiff_extension
+
+    elseif format == 'png' then
+        ffmpegparam = pngparam
+        extension = png_extension
+    else
+        ffmpegparam = bmpparam
+        extension = bmp_extension
+    end
+
     local result = "-"
     local quote = "\""
 

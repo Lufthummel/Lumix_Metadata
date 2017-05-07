@@ -39,7 +39,15 @@ if (pluginPrefs.videopath == nil) then
     _G.VIDEOPATH = '/tmp/'
 
 else
-    _G.VIDEOPATH = pluginPrefs.videopath
+_G.VIDEOPATH = pluginPrefs.videopath
+end
+
+if (pluginPrefs.format == nil) then
+
+    _G.FORMAT = 'jpeg'
+
+else
+    _G.FORMAT = pluginPrefs.format
 end
 
 

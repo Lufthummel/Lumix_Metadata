@@ -20,6 +20,7 @@ local LrView = import 'LrView'
 local LrFileUtils = import 'LrFileUtils'
 local LrPrefs = import "LrPrefs"
 local pluginPrefs = LrPrefs.prefsForPlugin(_PLUGIN)
+local LrBinding= import 'LrBinding'
 
 local myLogger = LrLogger( 'libraryLogger' )
 myLogger:enable( "logfile" ) -- or "logfile"
@@ -39,7 +40,8 @@ function ImportVideo.showUpdateDialog()
 
     LrFunctionContext.callWithContext('Import Dialog', function(context)
 
-
+        local properties = LrBinding.makePropertyTable( context )
+        properties.format = _G.FORMAT
         local f = LrView.osFactory()
         local currentPathText = f:static_text {
             title = "Source " .. _G.VIDEOPATH,
@@ -49,6 +51,7 @@ function ImportVideo.showUpdateDialog()
         }
         local c = f:column {
             spacing = f:control_spacing(),
+            bind_to_object = properties,
             f:row {
                 spacing = f:control_spacing(),
                 f:static_text {
@@ -83,15 +86,45 @@ function ImportVideo.showUpdateDialog()
                     end,
                 },
             },
+
+            f:row {
+                spacing = f:control_spacing(),
+                f:static_text {
+                    title = 'Choose File Format',
+                    alignment = 'left',
+                    fill_horizontal = 1,
+                },
+                f:popup_menu {
+                    items = {
+                        { title = "JPEG", value = "jpeg" },
+                        { title = "TIFF", value = "tiff" },
+                        { title = "PNG", value = "png" },
+                        { title = "BMP", value = "BMP" },
+                    },
+                    value = LrView.bind 'format'
+
+                    --
+                    -- -- _G.FORMAT = LrView.bind 'format'
+                    -- pluginPrefs.format = = LrView.bind 'format'
+                },
+            },
             f:row {
                 currentPathText,
-            }
+                f:static_text {
+                    title = LrView.bind 'format',
+
+                },
+            },
         }
 
-        if (LrDialogs.presentModalDialog({title = "Extract Videoframes", contents = c, actionVerb = "Go"}))
+        if (LrDialogs.presentModalDialog({title = "Extract Videoframes", contents = c, actionVerb = "Go"}) ~= 'cancel' )
             then
 
-            myLogger:trace( "-----   Los gehts...")
+            -- myLogger:trace( "-----   Los gehts... " )
+            -- myLogger:trace( properties.format )
+            _G.FORMAT = properties.format
+            pluginPrefs.format = _G.FORMAT
+            myLogger:trace( "-----   Los gehts... " .. _G.FORMAT)
 
             -- LrTasks.startAsyncTask(function ()
 
@@ -133,7 +166,7 @@ function ImportVideo.showUpdateDialog()
                             else
                                 progressScope:setCaption(caption)
                                 LrFileUtils.createDirectory(newPath)
-                                result = ffmpeg(filePath, currentFileName, newPath)
+                                result = ffmpeg(filePath, currentFileName, newPath, _G.FORMAT)
                                 myLogger:trace( "result = " .. result)
                             end
                         end
