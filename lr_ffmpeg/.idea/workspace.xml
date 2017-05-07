@@ -42,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImportVideo.lua" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImportVideo.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ImportVideo.lua">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="433">
@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Helper.lua" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Helper.lua" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Helper.lua">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="370">
-              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -116,14 +116,14 @@
         <option value="$PROJECT_DIR$/src/PluginManager.lua" />
         <option value="$PROJECT_DIR$/src/Info.lua" />
         <option value="$PROJECT_DIR$/src/PluginInit.lua" />
-        <option value="$PROJECT_DIR$/src/Helper.lua" />
         <option value="$PROJECT_DIR$/src/ImportVideo.lua" />
+        <option value="$PROJECT_DIR$/src/Helper.lua" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="470" />
-    <option name="y" value="199" />
+    <option name="y" value="197" />
     <option name="width" value="2394" />
     <option name="height" value="1000" />
   </component>
@@ -462,7 +462,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="470" y="199" width="2394" height="1000" extended-state="0" />
+    <frame x="470" y="197" width="2394" height="1000" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -630,18 +630,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Helper.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ImportVideo.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="119" column="108" selection-start-line="119" selection-start-column="108" selection-end-line="119" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Helper.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
           <folding />
         </state>
       </provider>

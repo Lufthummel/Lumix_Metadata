@@ -70,10 +70,11 @@ end
 function exiftoolPath(file, outpath)
 
     local quote = "\""
-    local param = " -TagsFromFile "
+    local param = " -tagsFromFile "
+    local param2 = " -overwrite_original "
 
     -- local cmd = execpath .. exec .. param ..'"' .. file ..'"' .. " > " .. tmpfile
-    cmd = _G.EXIFTOOLPATH .. " " .. quote .. file .. quote .. param .. quote .. outpath  .. quote
+    cmd = _G.EXIFTOOLPATH .. " " .. param .. quote .. file .. quote .. param2 .. quote .. outpath  .. quote
 
     myLogger:trace( "Start ExifTool: " .. cmd )
     result = LrTasks.execute( cmd )
