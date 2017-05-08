@@ -88,7 +88,7 @@ function ffmpeg(file, filename, outpath, format)
     local ffmpegparam = ""
     local extension =""
 
-    local jpegparam = " -q:v 1 "
+    local jpegparam = " -q:v 1 -qmin 1 -qmax 1 "
     local bmpparam = " "
     local pngparam = " "
     local tiffparam = " -compression_algo packbits -pix_fmt rgb24 "

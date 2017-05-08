@@ -90,11 +90,13 @@ function ImportVideo.showUpdateDialog()
             f:row {
                 spacing = f:control_spacing(),
                 f:static_text {
+
                     title = 'Choose File Format',
                     alignment = 'left',
                     fill_horizontal = 1,
                 },
                 f:popup_menu {
+                    width = 150,
                     items = {
                         { title = "JPEG", value = "jpeg" },
                         { title = "TIFF", value = "tiff" },
@@ -180,9 +182,10 @@ function ImportVideo.showUpdateDialog()
                     progressScope:done()
 
                     LrTasks.sleep(1)
-                    LrDialogs.message("done")
+                    LrDialogs.message("Background Jobs Finished!")
 
                 end)
+
             end
 
     end)

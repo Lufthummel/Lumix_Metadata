@@ -42,21 +42,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImportVideo.lua" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ImportVideo.lua" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ImportVideo.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="119" column="108" selection-start-line="119" selection-start-column="108" selection-end-line="119" selection-end-column="108" />
+            <state relative-caret-position="538">
+              <caret line="98" column="32" selection-start-line="98" selection-start-column="32" selection-end-line="98" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Helper.lua" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Helper.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Helper.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+            <state relative-caret-position="685">
+              <caret line="90" column="47" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -116,14 +116,14 @@
         <option value="$PROJECT_DIR$/src/PluginManager.lua" />
         <option value="$PROJECT_DIR$/src/Info.lua" />
         <option value="$PROJECT_DIR$/src/PluginInit.lua" />
-        <option value="$PROJECT_DIR$/src/ImportVideo.lua" />
         <option value="$PROJECT_DIR$/src/Helper.lua" />
+        <option value="$PROJECT_DIR$/src/ImportVideo.lua" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="469" />
-    <option name="y" value="195" />
+    <option name="x" value="468" />
+    <option name="y" value="194" />
     <option name="width" value="2394" />
     <option name="height" value="1000" />
   </component>
@@ -462,7 +462,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="469" y="195" width="2394" height="1000" extended-state="0" />
+    <frame x="468" y="194" width="2394" height="1000" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -630,18 +630,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ImportVideo.lua">
+    <entry file="file://$PROJECT_DIR$/src/Helper.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="119" column="108" selection-start-line="119" selection-start-column="108" selection-end-line="119" selection-end-column="108" />
+        <state relative-caret-position="685">
+          <caret line="90" column="47" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Helper.lua">
+    <entry file="file://$PROJECT_DIR$/src/ImportVideo.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+        <state relative-caret-position="538">
+          <caret line="98" column="32" selection-start-line="98" selection-start-column="32" selection-end-line="98" selection-end-column="32" />
           <folding />
         </state>
       </provider>
