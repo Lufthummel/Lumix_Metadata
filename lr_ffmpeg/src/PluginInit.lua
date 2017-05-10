@@ -67,7 +67,7 @@ if WIN_ENV == true then
     _G.FFMPEGPATH = '"' .. LrPathUtils.child( LrPathUtils.child( _PLUGIN.path, "mac" ), "ffmpeg" ) .. '"'
     myLogger:trace( " Windows Environment" .. _G.FFMPEGPATH )
 else
-    _G.FFMPEGPATH = '"' .. LrPathUtils.child( LrPathUtils.child( _PLUGIN.path, "mac" ), "ffmpeg" ) .. '"'
+    _G.FFMPEGPATH = '"' .. LrPathUtils.child( LrPathUtils.child( _PLUGIN.path, "win" ), "ffmpeg.exe" ) .. '"'
     myLogger:trace( " On a Mac, ffmpeg =  " .. _G.FFMPEGPATH)
 
 end
