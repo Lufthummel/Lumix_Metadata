@@ -88,7 +88,8 @@ function ffmpeg(file, filename, outpath, format)
     local ffmpegparam = ""
     local extension =""
 
-    local jpegparam = " -q:v 1 -qmin 1 -qmax 1 "
+    -- local jpegparam = " -q:v 1 -qmin 1 -qmax 1 "
+    local jpegparam = " -q:v 2 "
     local bmpparam = " "
     local pngparam = " "
     local tiffparam = " -compression_algo packbits -pix_fmt rgb24 "
@@ -120,6 +121,7 @@ function ffmpeg(file, filename, outpath, format)
     cmd = _G.FFMPEGPATH .. " -i " .. quote .. file .. quote .. ffmpegparam .. quote .. outpath  .. filename .. extension .. quote
     myLogger:trace("FFMPEG cmd = " .. cmd)
     result = LrTasks.execute( cmd )
+    myLogger:trace("FFMPEG result = " .. result)
 
     -- exiftool
     exiftoolPath(file, outpath)
