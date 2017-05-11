@@ -37,6 +37,7 @@
     </target>
 
     <target name="copy-resources" depends="init">
+
         <copy todir="${pluginFolder}">
             <fileset dir="${resources}" casesensitive="yes">
                 <include name="**/*"/>
@@ -80,21 +81,58 @@
             <mapper type="glob" from="*.lua" to="${pluginFolder}/*.lua" />
         </apply>
         -->
+
+        <!-- ant copy does not copy permissions so using cp instead! -->
+        <echo message="-> ${src}"/>
+        <echo message="-> ${pluginFolder}"/>
+
+        <exec executable="bash">
+
+            <arg line="-c 'cp -R ${src}/* ${pluginFolder}'"/>
+        </exec>
+
+        <!--
         <copy todir="${pluginFolder}">
             <fileset dir="${src}" casesensitive="yes">
                 <include name="**/*"/>
             </fileset>
         </copy>
+        -->
 
     </target>
 
     <target name="dist" depends="modify-version, compile">
+
+        <exec executable="zip" dir="${build}">
+            <arg value="-qR" />
+            <arg value="${pluginDeploymentUnit}" />
+            <arg value="*" />
+
+
+        </exec>
+        <!--
         <zip destfile="${pluginDeploymentUnit}" basedir="${build}">
             <include name="${pluginFolderName}/**" />
         </zip>
+        -->
+
     </target>
 
     <target  name="install" depends="dist">
+
+        <echo message="src: ${pluginDeploymentUnit}"/>
+        <echo message="target: ${lrPluginFolder}"/>
+
+        <exec executable="unzip">
+            <arg value="-o" />
+            <arg value="${pluginDeploymentUnit}" />
+            <arg value="-d" />
+            <arg value="${lrPluginFolder}" />
+
+        </exec>
+
+        <!-- Ant unzip does not preserve permissions...
         <unzip src="${pluginDeploymentUnit}" dest="${lrPluginFolder}" overwrite="true" />
+        -->
     </target>
 </project>
