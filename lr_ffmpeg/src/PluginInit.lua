@@ -17,11 +17,31 @@ local pluginPrefs = LrPrefs.prefsForPlugin(_PLUGIN)
 
 if (pluginPrefs.converter == nil) then
 
-    _G.CONVERTERPATH = '/usr/local/bin/gm'
+_G.CONVERTERPATH = '/usr/local/bin/gm'
 
 else
-    _G.CONVERTERPATH = pluginPrefs.converter
+_G.CONVERTERPATH = pluginPrefs.converter
 end
+
+
+if (pluginPrefs.videopath == nil) then
+
+    _G.VIDEOPATH = '/usr/local/bin/gm'
+
+else
+    _G.VIDEOPATH = pluginPrefs.videopath
+end
+
+myLogger:trace( " --> " .. _G.VIDEOPATH)
+
+if (pluginPrefs.lrpath == nil) then
+
+    _G.LRPATH = '/usr/local/bin/gm'
+
+else
+    _G.LRPATH = pluginPrefs.lrpath
+end
+
 
 
 if (pluginPrefs.format == nil) then
