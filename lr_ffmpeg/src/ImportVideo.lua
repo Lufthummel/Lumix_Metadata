@@ -44,11 +44,18 @@ function ImportVideo.showUpdateDialog()
         properties.format = _G.FORMAT
         local f = LrView.osFactory()
         local currentPathText = f:static_text {
-            title = "Source " .. _G.VIDEOPATH,
+            title = "Source: " .. _G.VIDEOPATH .. "  ",
             alignment = 'left',
             fill_horizontal = 1,
             width_in_chars = 50,
         }
+
+        local outPathText = f:static_text {
+            title = "Destination: " .. _G.LRPATH,
+            alignment = 'left',
+            fill_horizontal = 1,
+        }
+
         local c = f:column {
             spacing = f:control_spacing(),
             bind_to_object = properties,
@@ -86,6 +93,40 @@ function ImportVideo.showUpdateDialog()
                     end,
                 },
             },
+            f:row {
+                spacing = f:control_spacing(),
+                f:static_text {
+                    title = 'Choose target directory',
+                    alignment = 'left',
+                    fill_horizontal = 1,
+                },
+                f:push_button {
+                    width = 150,
+                    title = 'Select ...',
+                    enabled = true,
+                    action = function()
+                        tmp = LrDialogs.runOpenPanel {title = "Select Lightroom import Dir", canChooseFiles = false, canChooseDirectories = true, allowsMultipleSelection = false }
+                        myLogger:trace( #tmp .. " -> tmp " .. tmp[1])
+
+                        _G.LRPATH = string.gsub(tmp[1], [[\]],[[\\]])
+
+                        -- win or mac?
+                        if (string.find(_G.LRPATH, [[\]] ) == nil) then
+                            myLogger:trace( "MAC")
+                            sep =  [[/]]
+                            myLogger:trace( "MAC2" .. sep)
+                        else
+                            sep = [[\\]]
+                            myLogger:trace( "WIN" .. sep)
+                        end
+                        _G.LRPATH = _G.LRPATH .. sep
+
+                        myLogger:trace( " LR dir -> tmp " .. _G.LRPATH)
+                        outPathText.title = "Destination: " .. _G.LRPATH
+                        pluginPrefs.lrpath = _G.LRPATH
+                    end,
+                },
+            },
 
             f:row {
                 spacing = f:control_spacing(),
@@ -112,6 +153,15 @@ function ImportVideo.showUpdateDialog()
             },
             f:row {
                 currentPathText,
+                outPathText,
+                f:static_text {
+                    title = LrView.bind 'format',
+
+                },
+            },
+            f:row {
+
+                outPathText,
                 f:static_text {
                     title = LrView.bind 'format',
 

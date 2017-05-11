@@ -40,6 +40,6 @@ return {
 	LrInitPlugin = 'PluginInit.lua',
 
 
-	VERSION = { major=0, minor=1, revision=1, build=155}
+	VERSION = { major=0, minor=1, revision=1, build=168}
 
 }

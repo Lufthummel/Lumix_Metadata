@@ -13,43 +13,16 @@ local myLogger = LrLogger( 'libraryLogger' )
 myLogger:enable( "logfile" ) -- or "logfile"
 
 local pluginPrefs = LrPrefs.prefsForPlugin(_PLUGIN)
--- [[
-if (pluginPrefs.exiftool == nil) then
-
-    _G.EXIFTOOLPATH = '/usr/local/bin/exiftool'
-
-else
-    _G.EXIFTOOLPATH = pluginPrefs.exiftool
-end
-]]
 
 
---[[
-if (pluginPrefs.ffmpeg == nil) then
+if (pluginPrefs.converter == nil) then
 
-    _G.FFMPEGPATH = '/usr/local/bin/ffmpeg'
+    _G.CONVERTERPATH = '/usr/local/bin/gm'
 
 else
-    _G.FFMPEGPATH = pluginPrefs.ffmpeg
-end
-]]
-
-if (pluginPrefs.lrpath == nil) then
-
-    _G.LRPATH = '/tmp/'
-
-else
-    _G.LRPATH = pluginPrefs.lrpath
+    _G.CONVERTERPATH = pluginPrefs.converter
 end
 
-
-if (pluginPrefs.videopath == nil) then
-
-    _G.VIDEOPATH = '/tmp/'
-
-else
-_G.VIDEOPATH = pluginPrefs.videopath
-end
 
 if (pluginPrefs.format == nil) then
 
@@ -57,6 +30,14 @@ if (pluginPrefs.format == nil) then
 
 else
     _G.FORMAT = pluginPrefs.format
+end
+
+if (pluginPrefs.hq == nil) then
+
+    _G.HQ = true
+
+else
+    _G.HQ = pluginPrefs.hq
 end
 
 

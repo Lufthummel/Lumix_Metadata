@@ -24,159 +24,88 @@ PluginManager = {}
 
 function PluginManager.sectionsForTopOfDialog( f, p )
 
-
-    local exifToolPathText = f:static_text {
-        title = "Exiftool location: " .. _G.EXIFTOOLPATH,
+    myLogger:trace( "top Dialog")
+    local converterToolPathText = f:static_text {
+        title = "Image converter location: " .. _G.CONVERTERPATH,
         alignment = 'left',
         fill_horizontal = 1,
     }
 
+    p.hqEnabled = false
 
-    local ffmpegPathText = f:static_text {
-        title = "FFMPEG location: " .. _G.FFMPEGPATH,
-        alignment = 'left',
-        fill_horizontal = 1,
-    }
 
-    local videoPathText = f:static_text {
-        title = "Video dir: " .. _G.VIDEOPATH,
-        alignment = 'left',
-        fill_horizontal = 1,
-    }
-
-    local lrPathText = f:static_text {
-        title = "Lightroom dir: " .. _G.LRPATH,
-        alignment = 'left',
-        fill_horizontal = 1,
-    }
     return {
-
-
 
         -- section for the top of the dialog
         {
             title = "Path to Executabled & Directories",
+            bind_to_object = p,
             f:row {
             spacing = f:control_spacing(),
             f:static_text {
-                title = 'Click the button to set the path to exiftool executable',
+                title = 'Click the button to set the path to image converter executable',
                 alignment = 'left',
                 fill_horizontal = 1,
             },
             f:push_button {
                 width = 150,
-                title = 'Find Exiftool',
+                title = 'Find GraphicsMagick',
                 enabled = true,
                 action = function()
-                    tmp = LrDialogs.runOpenPanel {title = "Select Exiftool Executable", canChooseFiles = true, canChooseDirectories = false, allowsMultipleSelection = false }
+                    tmp = LrDialogs.runOpenPanel {title = "Select Converter Executable", canChooseFiles = true, canChooseDirectories = false, allowsMultipleSelection = false }
 
-                    _G.EXIFTOOLPATH = string.gsub(tmp[1], [[\]],[[\\]])
-                    exifToolPathText.title = "Exiftool location: " .. _G.EXIFTOOLPATH
-                    pluginPrefs.exiftool = _G.EXIFTOOLPATH
+                    _G.CONVERTERPATH = string.gsub(tmp[1], [[\]],[[\\]])
+                    converterToolPathText.title = "Exiftool location: " .. _G.EXIFTOOLPATH
+                    pluginPrefs.converter = _G.CONVERTERPATH
                 end,
             },
         },
             f:row {
-                exifToolPathText,
-            },
-            f:row {
-                spacing = f:control_spacing(),
-                f:static_text {
-                    title = 'Click the button to set the path to ffmpeg executable',
-                    alignment = 'left',
-                    fill_horizontal = 1,
-                },
-                f:push_button {
-                    width = 150,
-                    title = 'Find FFMPEG',
-                    enabled = true,
-                    action = function()
-                        tmp = LrDialogs.runOpenPanel {title = "Select FFMPEG Executable", canChooseFiles = true, canChooseDirectories = false, allowsMultipleSelection = false }
-
-                        _G.FFMPEGPATH = string.gsub(tmp[1], [[\]],[[\\]])
-                        ffmpegPathText.title = "FFMPEG location: " .. _G.FFMPEGPATH
-                        pluginPrefs.ffmpeg = _G.FFMPEGPATH
-                    end,
+                converterToolPathText,
+                f:checkbox {
+                    title = "Enable HQ Mode", -- label text
+                    alignment = 'Right',
+                    value = bind( "hqEnabled" ) -- bind button state to data key
                 },
             },
-            f:row {
-                ffmpegPathText,
-            },
-            f:row {
-                spacing = f:control_spacing(),
-                f:static_text {
-                    title = 'Click the button to set the Lightroom import directory',
-                    alignment = 'left',
-                    fill_horizontal = 1,
-                },
-                f:push_button {
-                    width = 150,
-                    title = 'Set LR dir',
-                    enabled = true,
-                    action = function()
-                        tmp = LrDialogs.runOpenPanel {title = "Select Lightroom import Dir", canChooseFiles = false, canChooseDirectories = true, allowsMultipleSelection = false }
-                        myLogger:trace( #tmp .. " -> tmp " .. tmp[1])
 
-                        _G.LRPATH = string.gsub(tmp[1], [[\]],[[\\]])
-
-                        -- win or mac?
-                        if (string.find(_G.LRPATH, [[\]] ) == nil) then
-                            myLogger:trace( "MAC")
-                            sep =  [[/]]
-                            myLogger:trace( "MAC2" .. sep)
-                        else
-                            sep = [[\\]]
-                            myLogger:trace( "WIN" .. sep)
-                        end
-                        _G.LRPATH = _G.LRPATH .. sep
-
-                        myLogger:trace( " LR dir -> tmp " .. _G.LRPATH)
-                        lrPathText.title = "Lightroom dir: " .. _G.LRPATH
-                        pluginPrefs.lrpath = _G.LRPATH
-                    end,
-                },
-            },
-            f:row {
-                lrPathText,
-            },
-            f:row {
-                spacing = f:control_spacing(),
-                f:static_text {
-                    title = 'Click the button to set the temp directory',
-                    alignment = 'left',
-                    fill_horizontal = 1,
-                },
-                f:push_button {
-                    width = 150,
-                    title = 'Set default video dir',
-                    enabled = true,
-                    action = function()
-                        tmp = LrDialogs.runOpenPanel {title = "Select Temp Dir", canChooseFiles = false, canChooseDirectories = true, allowsMultipleSelection = false }
-                        myLogger:trace( #tmp .. " -> tmp " .. tmp[1])
-
-                        _G.VIDEOPATH = string.gsub(tmp[1], [[\]],[[\\]])
-
-                        -- win or mac?
-                        if (string.find(_G.VIDEOPATH, [[\]] ) == nil) then
-                            myLogger:trace( "MAC")
-                            sep =  [[/]]
-                            myLogger:trace( "MAC2" .. sep)
-                        else
-                            sep = [[\\]]
-                            myLogger:trace( "WIN" .. sep)
-                        end
-                        _G.VIDEOPATH = _G.VIDEOPATH .. sep
-
-                        myLogger:trace( #tmp .. " -> tmp " .. _G.VIDEOPATH)
-                        videoPathText.title = "Default input  dir: " .. _G.VIDEOPATH
-                        pluginPrefs.videopath = _G.VIDEOPATH
-                    end,
-                },
-            },
-            f:row {
-                videoPathText,
-            },
         },
+
     }
+
+
+
 end
 
+function PluginManager.sectionsForBottomOfDialog(f,p)
+
+    license = "This Plugin is licensed under the WTF license. So unless you are planning to use it for building " ..
+              "an atomic bomb or any other violent tool you can use for what ever you want" ..
+              "This Plugin includes executables of FFMPEG and Exiftool in unmodified form" ..
+              "For license terms of FFMPEG please visit www.ffmpeg.org" ..
+              "License terms of Exiftool are mentioned here: http://www.sno.phy.queensu.ca/~phil/exiftool/#license" ..
+              "The Author of the plugin takes no responsibilities for the use of the tool. It is seen as work in progress" ..
+              "So it is a good idea to back up your computer - if something went wrong it is not my fault" ..
+              "If you like the tool please share the link to it and write something positive about it"
+
+
+    myLogger:trace( "bottom Dialog")
+    return {
+        {
+            title = "License",
+            f:row {
+                spacing = f:control_spacing(),
+                f:static_text {
+                title = license,
+                alignment = 'left',
+                fill_horizontal = 1,
+                }
+            }
+        }
+    }
+
+end
+
+function PluginManager.endDialog(p)
+    myLogger:trace( "end Dialog " .. p.hqenabled )
+end
