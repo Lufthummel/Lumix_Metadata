@@ -107,5 +107,5 @@ function PluginManager.sectionsForBottomOfDialog(f,p)
 end
 
 function PluginManager.endDialog(p)
-    myLogger:trace( "end Dialog " .. p.hqenabled )
+    -- myLogger:trace( "end Dialog " .. p.hqenabled )
 end

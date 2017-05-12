@@ -76,6 +76,10 @@ function exiftoolPath(file, outpath)
     -- local cmd = execpath .. exec .. param ..'"' .. file ..'"' .. " > " .. tmpfile
     cmd = _G.EXIFTOOLPATH .. " " .. param .. quote .. file .. quote .. param2 .. quote .. outpath  .. quote
 
+    if WIN_ENV == true then
+        cmd = quote .. cmd .. quote
+    end
+
     myLogger:trace( "Start ExifTool: " .. cmd )
     result = LrTasks.execute( cmd )
     myLogger:trace( "End ExifTool " .. result  )
@@ -119,6 +123,11 @@ function ffmpeg(file, filename, outpath, format)
     local quote = "\""
 
     cmd = _G.FFMPEGPATH .. " -i " .. quote .. file .. quote .. ffmpegparam .. quote .. outpath  .. filename .. extension .. quote
+
+    if WIN_ENV == true then
+        cmd = quote .. cmd .. quote
+    end
+
     myLogger:trace("FFMPEG cmd = " .. cmd)
     result = LrTasks.execute( cmd )
     myLogger:trace("FFMPEG result = " .. result)

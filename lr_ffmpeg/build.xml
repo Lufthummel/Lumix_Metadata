@@ -102,11 +102,13 @@
     </target>
 
     <target name="dist" depends="modify-version, compile">
+        <echo message="build: ${build}"/>
+        <echo message="src: ${pluginDeploymentUnit}"/>
 
         <exec executable="zip" dir="${build}">
             <arg value="-qR" />
             <arg value="${pluginDeploymentUnit}" />
-            <arg value="*" />
+            <arg value="/*" />
 
 
         </exec>
