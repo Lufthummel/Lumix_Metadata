@@ -43,7 +43,7 @@ function PluginManager.sectionsForTopOfDialog( f, p )
             f:row {
             spacing = f:control_spacing(),
             f:static_text {
-                title = 'Click the button to set the path to image converter executable',
+                title = 'Click the button to set the path to ImageMagick executable',
                 alignment = 'left',
                 fill_horizontal = 1,
             },
@@ -55,7 +55,7 @@ function PluginManager.sectionsForTopOfDialog( f, p )
                     tmp = LrDialogs.runOpenPanel {title = "Select Converter Executable", canChooseFiles = true, canChooseDirectories = false, allowsMultipleSelection = false }
 
                     _G.CONVERTERPATH = string.gsub(tmp[1], [[\]],[[\\]])
-                    converterToolPathText.title = "Exiftool location: " .. _G.EXIFTOOLPATH
+                    converterToolPathText.title = "ImageMagick location: " .. _G.CONVERTERPATH
                     pluginPrefs.converter = _G.CONVERTERPATH
                 end,
             },
@@ -79,14 +79,15 @@ end
 
 function PluginManager.sectionsForBottomOfDialog(f,p)
 
-    license = "This Plugin is licensed under the WTF license. So unless you are planning to use it for building " ..
-              "an atomic bomb or any other violent tool you can use for what ever you want" ..
-              "This Plugin includes executables of FFMPEG and Exiftool in unmodified form" ..
-              "For license terms of FFMPEG please visit www.ffmpeg.org" ..
-              "License terms of Exiftool are mentioned here: http://www.sno.phy.queensu.ca/~phil/exiftool/#license" ..
-              "The Author of the plugin takes no responsibilities for the use of the tool. It is seen as work in progress" ..
-              "So it is a good idea to back up your computer - if something went wrong it is not my fault" ..
-              "If you like the tool please share the link to it and write something positive about it"
+    license = "This Plugin is licensed under the WTF license. So unless you are planning to use it for building /l/n" ..
+              "an atomic bomb or any other violent tool you can use for what ever you want /l/n" ..
+              "This Plugin includes executables of FFMPEG and Exiftool in unmodified form /l/n" ..
+              "For license terms of FFMPEG please visit www.ffmpeg.org /l/n" ..
+              "License terms of Exiftool are mentioned here: http://www.sno.phy.queensu.ca/~phil/exiftool/#license /l/n" ..
+              "The Author of the plugin takes no responsibilities for the use of the tool. It is seen as work in progress /l/n" ..
+              "So it is a good idea to back up your computer - if something went wrong it is not my fault /l/n" ..
+              "If you like the tool please share the link to it and write something positive about it /l/n" ..
+              "Any commercial distribution of this Plugin is forbidden!!!!"
 
 
     myLogger:trace( "bottom Dialog")

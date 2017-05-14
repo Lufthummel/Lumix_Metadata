@@ -28,9 +28,16 @@ return {
 
 	LrToolkitIdentifier = 'de.minaxsoft.lumixffmpeg',
 	LrExportMenuItems = {
-		title = LOC "$$$/LumixFFMPEG/MenuEntry=Extract Frames from Video", -- The display text for the menu item
-		file = "ImportVideo.lua", -- The script that runs when the item is selected
-		enabledWhen = "photosAvailable",
+		{
+			title = LOC "$$$/LumixFFMPEG/MenuEntry=Batch Extract Frames from Videos", -- The display text for the menu item
+			file = "ImportVideo.lua", -- The script that runs when the item is selected
+			enabledWhen = "photosAvailable",
+		},
+		{
+			title = LOC "$$$/LumixFFMPEG/MenuEntry=Extract Frames from Videofile", -- The display text for the menu item
+			file = "ImportSingleVideo.lua", -- The script that runs when the item is selected
+			enabledWhen = "photosAvailable",
+		},
 	},
 	LrPluginName = "Lumix FFMPEG",
 
@@ -40,6 +47,6 @@ return {
 	LrInitPlugin = 'PluginInit.lua',
 
 
-	VERSION = { major=0, minor=1, revision=1, build=206}
+	VERSION = { major=0, minor=2, revision=1, build=235}
 
 }

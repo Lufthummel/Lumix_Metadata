@@ -24,6 +24,7 @@ Hope it is useful.
 
 local LrTasks = import "LrTasks"
 local LrLogger = import 'LrLogger'
+local LrFileUtils = import 'LrFileUtils'
 local prefs = import 'LrPrefs'.prefsForPlugin()
 
 local myLogger = LrLogger( 'libraryLogger' )
@@ -87,43 +88,72 @@ function exiftoolPath(file, outpath)
 
 end
 
-function ffmpeg(file, filename, outpath, format)
+function ffmpeg(file, filename, outpath, format, start, frame, number)
 
     local ffmpegparam = ""
     local extension =""
 
     -- local jpegparam = " -q:v 1 -qmin 1 -qmax 1 "
     local jpegparam = " -q:v 2 "
+    local miniparam = " -q:v 4 -filter:v scale=1024:-1 "
     local bmpparam = " "
     local pngparam = " "
     local tiffparam = " -compression_algo packbits -pix_fmt rgb24 "
-    local tiff_extension ="%03d.tiff"
-    local jpeg_extension ="%03d.jpg"
-    local png_extension ="%03d.png"
-    local bmp_extension ="%03d.bmp"
+    local tiff_extension ="%04d.tiff"
+    local jpeg_extension ="%04d.jpg"
+    local png_extension ="%04d.png"
+    local bmp_extension ="%04d.bmp"
+    local startparam = ""
+    local frameparam = ""
+    local numberparam = ""
+
 
     -- lua kann kein switch...
 
     if format == 'jpeg' then
         ffmpegparam = jpegparam
         extension = jpeg_extension
+    elseif format == 'mini' then
+        ffmpegparam = miniparam
+        extension = jpeg_extension
     elseif format == 'tiff' then
         ffmpegparam = tiffparam
         extension = tiff_extension
 
-    elseif format == 'png' then
+    elseif format == 'png' or format == 'hq' then
         ffmpegparam = pngparam
         extension = png_extension
     else
+        myLogger:trace("BMP...")
         ffmpegparam = bmpparam
         extension = bmp_extension
     end
 
+    if start == nil then
+        startparam = ""
+    else
+        startparam = " -ss " .. start
+    end
+
+    if frame == nil then
+        frameparam = ""
+    else
+        frameparam = " -vframes " .. frame
+    end
+
+    if number == nil then
+        numberparam = ""
+    else
+        numberparam = " -start_number " .. number .. " "
+    end
+
+
     local result = "-"
     local quote = "\""
 
-    cmd = _G.FFMPEGPATH .. " -i " .. quote .. file .. quote .. ffmpegparam .. quote .. outpath  .. filename .. extension .. quote
-
+    myLogger:trace("CMD...")
+    cmd = _G.FFMPEGPATH .. startparam .. " -i " .. quote .. file .. quote .. frameparam .. ffmpegparam .. numberparam .. quote .. outpath  .. filename .. "_" .. extension .. quote
+    myLogger:trace("...CMD")
     if WIN_ENV == true then
         cmd = quote .. cmd .. quote
     end
@@ -131,6 +161,24 @@ function ffmpeg(file, filename, outpath, format)
     myLogger:trace("FFMPEG cmd = " .. cmd)
     result = LrTasks.execute( cmd )
     myLogger:trace("FFMPEG result = " .. result)
+
+    -- convert png to hq jpg
+    if format == 'hq' then
+        cmd =  _G.CONVERTERPATH .. " mogrify -format jpg -quality 100 " .. outpath .. _G.SEP .. "*.*"
+
+        if WIN_ENV == true then
+            cmd = quote .. cmd .. quote
+        end
+
+
+        myLogger:trace("Magick cmd = " .. cmd)
+
+        result = LrTasks.execute( cmd )
+        myLogger:trace("Magick result = " .. result)
+        -- delete png
+        LrFileUtils.delete(outpath .. _G.SEP .. "*.png")
+
+    end
 
     -- exiftool
     exiftoolPath(file, outpath)

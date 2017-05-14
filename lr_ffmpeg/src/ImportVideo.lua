@@ -71,7 +71,7 @@ function ImportVideo.showUpdateDialog()
                     title = 'Select ...',
                     enabled = true,
                     action = function()
-                        tmp = LrDialogs.runOpenPanel {title = "Select Temp Dir", canChooseFiles = false, canChooseDirectories = true, allowsMultipleSelection = false }
+                        tmp = LrDialogs.runOpenPanel {title = "Select Source Dir", canChooseFiles = false, canChooseDirectories = true, allowsMultipleSelection = false }
                         -- myLogger:trace( "Pfad nach Dialog " .. tmp[1])
 
                         _G.VIDEOPATH = string.gsub(tmp[1], [[\]],[[\\]])
@@ -105,7 +105,7 @@ function ImportVideo.showUpdateDialog()
                     title = 'Select ...',
                     enabled = true,
                     action = function()
-                        tmp = LrDialogs.runOpenPanel {title = "Select Lightroom import Dir", canChooseFiles = false, canChooseDirectories = true, allowsMultipleSelection = false }
+                        tmp = LrDialogs.runOpenPanel {title = "Select Destination Dir", canChooseFiles = false, canChooseDirectories = true, allowsMultipleSelection = false }
                         myLogger:trace( #tmp .. " -> tmp " .. tmp[1])
 
                         _G.LRPATH = string.gsub(tmp[1], [[\]],[[\\]])
@@ -142,7 +142,9 @@ function ImportVideo.showUpdateDialog()
                         { title = "JPEG", value = "jpeg" },
                         { title = "TIFF", value = "tiff" },
                         { title = "PNG", value = "png" },
-                        { title = "BMP", value = "BMP" },
+                        { title = "BMP", value = "bmp" },
+                        { title = "Mini", value = "mini" },
+                        { title = "HQ-JPEG", value = "hq" },
                     },
                     value = LrView.bind 'format'
 
@@ -209,7 +211,7 @@ function ImportVideo.showUpdateDialog()
                         caption = "Processing " .. currentFileName
                         ext = getextension(filePath)
 
-                        newPath = _G.LRPATH .. currentFileName ..  _G.SEP
+                        newPath = _G.LRPATH .. currentFileName .. "_" .. _G.FORMAT .. _G.SEP
 
                         if ( (ext == ".MP4") or (ext == ".MOV")) then
                             myLogger:trace( "MP4 or MOV...")

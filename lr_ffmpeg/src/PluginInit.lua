@@ -32,14 +32,30 @@ else
     _G.VIDEOPATH = pluginPrefs.videopath
 end
 
+if (pluginPrefs.filepath == nil) then
+
+    _G.FILEPATH = '/tmp'
+
+else
+    _G.FILEPATH = pluginPrefs.filepath
+end
+
 myLogger:trace( " --> " .. _G.VIDEOPATH)
 
 if (pluginPrefs.lrpath == nil) then
 
-    _G.LRPATH = '/usr/local/bin/gm'
+_G.LRPATH = '/usr/local/bin/gm'
 
 else
-    _G.LRPATH = pluginPrefs.lrpath
+_G.LRPATH = pluginPrefs.lrpath
+end
+
+if (pluginPrefs.fileoutpath == nil) then
+
+    _G.FILEOUTPATH = '/tmp'
+
+else
+    _G.FILEOUTPATH = pluginPrefs.fileoutpath
 end
 
 
