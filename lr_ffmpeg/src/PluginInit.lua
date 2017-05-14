@@ -20,7 +20,7 @@ if (pluginPrefs.converter == nil) then
 _G.CONVERTERPATH = '/usr/local/bin/gm'
 
 else
-_G.CONVERTERPATH = pluginPrefs.converter
+_G.CONVERTERPATH = '"' .. pluginPrefs.converter .. '"'
 end
 
 

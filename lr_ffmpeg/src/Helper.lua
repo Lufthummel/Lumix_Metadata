@@ -164,7 +164,7 @@ function ffmpeg(file, filename, outpath, format, start, frame, number)
 
     -- convert png to hq jpg
     if format == 'hq' then
-        cmd =  _G.CONVERTERPATH .. " mogrify -format jpg -quality 100 " .. outpath .. _G.SEP .. "*.*"
+        cmd =  _G.CONVERTERPATH .. " mogrify -format jpg -quality 100 " .. quote .. outpath .. _G.SEP .. "*.*" .. quote ..
 
         if WIN_ENV == true then
             cmd = quote .. cmd .. quote
