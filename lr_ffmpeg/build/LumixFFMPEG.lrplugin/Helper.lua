@@ -95,7 +95,7 @@ function ffmpeg(file, filename, outpath, format, start, frame, number)
 
     -- local jpegparam = " -q:v 1 -qmin 1 -qmax 1 "
     local jpegparam = " -q:v 2 "
-    local miniparam = " -q:v 4 -filter:v scale=1024:-1 "
+    local miniparam = " -q:v 2 -filter:v scale=1200:-1 "
     local bmpparam = " "
     local pngparam = " "
     local tiffparam = " -compression_algo packbits -pix_fmt rgb24 "
@@ -142,7 +142,7 @@ function ffmpeg(file, filename, outpath, format, start, frame, number)
     end
 
     if number == nil then
-        numberparam = ""
+        numberparam = " -start_number 0 "
     else
         numberparam = " -start_number " .. number .. " "
     end
@@ -176,7 +176,13 @@ function ffmpeg(file, filename, outpath, format, start, frame, number)
         result = LrTasks.execute( cmd )
         myLogger:trace("Magick result = " .. result)
         -- delete png
-        LrFileUtils.delete(outpath .. _G.SEP .. "*.png")
+
+        if WIN_ENV == true then
+            LrFileUtils.delete(outpath .. _G.SEP .. "*.png")
+        else
+            deleteFiles(outpath, ".png")
+        end
+
 
     end
 
@@ -184,6 +190,50 @@ function ffmpeg(file, filename, outpath, format, start, frame, number)
     exiftoolPath(file, outpath)
     return result
 
+end
+
+-- no wildcard delete on mac
+function deleteFiles(path, extension)
+    local quote = "\""
+    myLogger:trace("delete in = " .. path .. " ext = " .. extension)
+    local delpath = quote .. path .. quote .. "*" .. extension
+    local cmd = "rm " .. delpath
+    myLogger:trace("delete command = " .. cmd )
+    local result = LrTasks.execute (cmd)
+    myLogger:trace("result = " .. result)
+
+
+    --[[local success, reason = LrFileUtils.delete( delpath)
+
+
+    if not success then
+        myLogger:trace("delete command = " .. delpath )
+        myLogger:trace(reason)
+        myLogger:trace("ext = " .. ext )
+    end
+
+
+        for filePath in LrFileUtils.files( path ) do
+            ext = getextension(filePath)
+            myLogger:trace("ext = " .. ext )
+            myLogger:trace("filepath = " .. filePath )
+
+
+            if ext == extension then
+                if LrFileUtils.exists(quote .. filepath .. quote) then
+                    myLogger:trace( "file  existiert!!!! " .. filePath)
+                end
+
+                local success, reason = LrFileUtils.moveToTrash( quote .. filepath .. quote )
+                if not success then
+                    myLogger:trace("delete command = " .. filepath )
+                    myLogger:trace(reason)
+                    myLogger:trace("ext = " .. ext )
+                end
+            end
+
+        end
+        --]]
 end
 
 

@@ -38,7 +38,7 @@
             <state relative-caret-position="465">
               <caret line="31" column="83" selection-start-line="31" selection-start-column="83" selection-end-line="31" selection-end-column="83" />
               <folding>
-                <marker date="1494765959000" expanded="true" signature="1008:1244" ph="..." />
+                <marker date="1495190121000" expanded="true" signature="1008:1244" ph="..." />
               </folding>
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="ImportSingleVideo.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ImportSingleVideo.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="280" column="56" selection-start-line="280" selection-start-column="56" selection-end-line="280" selection-end-column="56" />
+            <state relative-caret-position="-390">
+              <caret line="204" column="27" selection-start-line="204" selection-start-column="27" selection-end-line="204" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -57,8 +57,8 @@
       <file leaf-file-name="ImportVideo.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ImportVideo.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="146" column="60" selection-start-line="146" selection-start-column="60" selection-end-line="146" selection-end-column="60" />
+            <state relative-caret-position="619">
+              <caret line="219" column="32" selection-start-line="217" selection-start-column="28" selection-end-line="219" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -67,8 +67,8 @@
       <file leaf-file-name="Helper.lua" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Helper.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="166" column="119" selection-start-line="166" selection-start-column="119" selection-end-line="166" selection-end-column="119" />
+            <state relative-caret-position="169">
+              <caret line="144" column="41" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -120,15 +120,15 @@
         <option value="$PROJECT_DIR$/src/ImportVideo.lua" />
         <option value="$PROJECT_DIR$/src/Info.lua" />
         <option value="$PROJECT_DIR$/src/PluginManager.lua" />
-        <option value="$PROJECT_DIR$/src/ImportSingleVideo.lua" />
         <option value="$PROJECT_DIR$/src/PluginInit.lua" />
+        <option value="$PROJECT_DIR$/src/ImportSingleVideo.lua" />
         <option value="$PROJECT_DIR$/src/Helper.lua" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="137" />
-    <option name="y" value="55" />
+    <option name="x" value="136" />
+    <option name="y" value="54" />
     <option name="width" value="2394" />
     <option name="height" value="1204" />
   </component>
@@ -428,7 +428,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="137" y="55" width="2394" height="1204" extended-state="0" />
+    <frame x="136" y="54" width="2394" height="1204" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -538,7 +538,7 @@
         <state relative-caret-position="570">
           <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
           <folding>
-            <marker date="1494765959000" expanded="true" signature="1008:1244" ph="..." />
+            <marker date="1495190121000" expanded="true" signature="1008:1244" ph="..." />
           </folding>
         </state>
       </provider>
@@ -604,7 +604,7 @@
         <state relative-caret-position="570">
           <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
           <folding>
-            <marker date="1494765959000" expanded="true" signature="1008:1244" ph="..." />
+            <marker date="1495190121000" expanded="true" signature="1008:1244" ph="..." />
           </folding>
         </state>
       </provider>
@@ -670,7 +670,7 @@
         <state relative-caret-position="495">
           <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
           <folding>
-            <marker date="1494765959000" expanded="true" signature="1008:1244" ph="..." />
+            <marker date="1495190121000" expanded="true" signature="1008:1244" ph="..." />
           </folding>
         </state>
       </provider>
@@ -736,7 +736,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1494765959000" expanded="true" signature="1008:1244" ph="..." />
+            <marker date="1495190121000" expanded="true" signature="1008:1244" ph="..." />
           </folding>
         </state>
       </provider>
@@ -806,20 +806,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ImportVideo.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="146" column="60" selection-start-line="146" selection-start-column="60" selection-end-line="146" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Info.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="83" selection-start-line="31" selection-start-column="83" selection-end-line="31" selection-end-column="83" />
           <folding>
-            <marker date="1494765959000" expanded="true" signature="1008:1244" ph="..." />
+            <marker date="1495190121000" expanded="true" signature="1008:1244" ph="..." />
           </folding>
         </state>
       </provider>
@@ -840,14 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ImportSingleVideo.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="280" column="56" selection-start-line="280" selection-start-column="56" selection-end-line="280" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PluginInit.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -856,10 +840,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ImportSingleVideo.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390">
+          <caret line="204" column="27" selection-start-line="204" selection-start-column="27" selection-end-line="204" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ImportVideo.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="219" column="32" selection-start-line="217" selection-start-column="28" selection-end-line="219" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Helper.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="166" column="119" selection-start-line="166" selection-start-column="119" selection-end-line="166" selection-end-column="119" />
+        <state relative-caret-position="169">
+          <caret line="144" column="41" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="41" />
           <folding />
         </state>
       </provider>

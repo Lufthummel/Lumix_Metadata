@@ -202,7 +202,7 @@ function ImportSingleVideo.showUpdateDialog()
                     width_in_chars = 5,
                     immediate = true,
                     alignment = 'right',
-                    min = 1,
+                    min = 0,
                     max = 9999,
                     precision = 0,
                     value = LrView.bind( 'startframe' ),
