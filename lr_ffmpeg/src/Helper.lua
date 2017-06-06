@@ -41,10 +41,13 @@ end
 
 
 function readFile(file)
+    myLogger:trace( "try to read  file: " .. file  )
     local f = io.open(file, "rb")
+    myLogger:trace( "open "  )
     local s = f:read("*all")
+    myLogger:trace( "read "  )
     f:close()
-    myLogger:trace( "read Json file: " .. s  )
+    myLogger:trace( "reading  file: " .. s  )
     return s
 
 end
@@ -65,6 +68,36 @@ myLogger:trace( "Start ExifTool: " .. cmd )
 result = LrTasks.execute( cmd )
 myLogger:trace( "End ExifTool " .. result  )
 return readFile(tmpfile)
+
+end
+
+function ffprobe(file)
+
+    local quote = "\""
+    local tmpfile = _G.TMPPATH .. _G.SEP .. "ffprobe.tmp"
+    --tmpfile = quote .. tmpfile .. quote
+    local param = " -v error -select_streams v:0 -show_entries stream=avg_frame_rate -of default=noprint_wrappers=1:nokey=1 "
+    local out = " > " .. tmpfile
+
+
+    cmd = _G.FFPROBEPATH .. param .. file .. out
+    if WIN_ENV == true then
+        cmd = quote .. cmd .. quote
+    end
+
+    myLogger:trace("FFPROBE cmd = " .. cmd)
+    result = LrTasks.execute( cmd )
+    myLogger:trace("FFPROBE result = " .. result)
+
+    --output = readFile(tmpfile)
+    output = LrFileUtils.readFile(tmpfile)
+    myLogger:trace("FFPROBE putput = " .. output)
+    if output == "" then
+
+        return 0
+    else
+        return 42
+    end
 
 end
 
@@ -151,9 +184,8 @@ function ffmpeg(file, filename, outpath, format, start, frame, number)
     local result = "-"
     local quote = "\""
 
-    myLogger:trace("CMD...")
+
     cmd = _G.FFMPEGPATH .. startparam .. " -i " .. quote .. file .. quote .. frameparam .. ffmpegparam .. numberparam .. quote .. outpath  .. filename .. "_" .. extension .. quote
-    myLogger:trace("...CMD")
     if WIN_ENV == true then
         cmd = quote .. cmd .. quote
     end

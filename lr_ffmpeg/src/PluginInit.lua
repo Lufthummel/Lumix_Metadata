@@ -84,11 +84,15 @@ _G.SEP = '/'
 
 if WIN_ENV == true then
     _G.FFMPEGPATH = '"' .. LrPathUtils.child( LrPathUtils.child( _PLUGIN.path, "win" ), "ffmpeg.exe" ) .. '"'
+    _G.FFPROBEPATH = '"' .. LrPathUtils.child( LrPathUtils.child( _PLUGIN.path, "win" ), "ffprobe.exe" ) .. '"'
     _G.EXIFTOOLPATH = '"' .. LrPathUtils.child( LrPathUtils.child( _PLUGIN.path, "win" ), "exiftool.exe" ) .. '"'
-    myLogger:trace( " Windows Environment" .. _G.FFMPEGPATH .. " + " ..  _G.EXIFTOOLPATH)
+    _G.TMPPATH = '"' .. LrPathUtils.child( _PLUGIN.path, "tmp" ) .. '"'
+    myLogger:trace( " Windows Environment" .. _G.FFMPEGPATH .. " + " ..  _G.EXIFTOOLPATH .. " + tmp = "  )
 else
     _G.FFMPEGPATH = '"' .. LrPathUtils.child( LrPathUtils.child( _PLUGIN.path, "mac" ), "ffmpeg" ) .. '"'
+    _G.FFPROBEPATH = '"' .. LrPathUtils.child( LrPathUtils.child( _PLUGIN.path, "mac" ), "ffprobe" ) .. '"'
     _G.EXIFTOOLPATH = '"' .. LrPathUtils.child( LrPathUtils.child( _PLUGIN.path, "mac" ), "/bin/exiftool" ) .. '"'
+    _G.TMPPATH = LrPathUtils.child( _PLUGIN.path, "tmp" )
     myLogger:trace( " On a Mac, ffmpeg =  " .. _G.FFMPEGPATH .. " + " ..  _G.EXIFTOOLPATH)
 
 end
