@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9da78845-2a38-4761-b225-0748c9a65105" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/dist/LumixFFMPEG.lrplugin.zip" afterPath="$PROJECT_DIR$/lr_ffmpeg/dist/LumixFFMPEG.lrplugin.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/dist/LumixMetadata.lrplugin.zip" afterPath="$PROJECT_DIR$/lr_metadata/dist/LumixMetadata.lrplugin.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/.idea/workspace.xml" afterPath="$PROJECT_DIR$/lr_ffmpeg/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/build.number" afterPath="$PROJECT_DIR$/lr_ffmpeg/build.number" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/Helper.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/Helper.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/ImportSingleVideo.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/ImportSingleVideo.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/Info.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/Info.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/PluginInit.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/PluginInit.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/src/Helper.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/src/Helper.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/src/ImportSingleVideo.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/src/ImportSingleVideo.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/src/Info.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/src/Info.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/src/PluginInit.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/src/PluginInit.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build.number" afterPath="$PROJECT_DIR$/lr_metadata/build.number" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/Info.lua" afterPath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/Info.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/src/Info.lua" afterPath="$PROJECT_DIR$/lr_metadata/src/Info.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/dist/FlickrHelper.lrplugin.zip" afterPath="$PROJECT_DIR$/lr_flickrhelper/dist/FlickrHelper.lrplugin.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/.idea/workspace.xml" afterPath="$PROJECT_DIR$/lr_flickrhelper/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build.number" afterPath="$PROJECT_DIR$/lr_flickrhelper/build.number" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/Info.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/Info.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/UpdateFlickrMetadata.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/UpdateFlickrMetadata.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/Info.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/Info.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/UpdateFlickrMetadata.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/UpdateFlickrMetadata.lua" />
     </list>
     <ignored path="Lumix_Metadata.iws" />
     <ignored path=".idea/workspace.xml" />

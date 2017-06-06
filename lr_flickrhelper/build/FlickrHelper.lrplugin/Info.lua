@@ -44,6 +44,6 @@ return {
 
 	LrMetadataProvider = 'FlickrMetadataDefinitionFile.lua',
 
-	VERSION = { major=0, minor=9, revision=2, build=84}
+	VERSION = { major=0, minor=9, revision=2, build=86}
 
 }

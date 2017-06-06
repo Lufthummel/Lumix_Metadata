@@ -164,8 +164,8 @@ function UpdateFlickrMetadata.setBBCode(json, tmpphoto, tmpid, tmpurl)
     local bbextra = make .. " " .. camera .. " with " .. lens .. " at " .. focal .. cr .. shsp .. " , " .. aperture .. " , " .. iso .. cr .. caption
 
 
-    local bbcode = string.format("[url=%s][img]%s[/img][/url]\n[url=%s]%s[/url]", tmpphoto:getPropertyForPlugin(_PLUGIN,"flickrurl"),
-                    tmpphoto:getPropertyForPlugin(_PLUGIN,"staticlarge"), tmpphoto:getPropertyForPlugin(_PLUGIN,"flickrurl"), title)
+    local bbcode = string.format("[url=%s][img]%s[/img][/url]\n[url=%s]%s[/url]", tmpurl,
+                    large, tmpurl, title)
 
     myLogger:trace(bbcode .. cr .. bbextra)
 
