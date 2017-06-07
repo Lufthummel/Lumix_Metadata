@@ -32,21 +32,25 @@ UpdateFlickrMetadata = {}
 function UpdateFlickrMetadata.showUpdateDialog()
     -- body of function
     -- LrDialogs.message( "Update Lumix Metadata", "Hello World!", "info" )
+    action = LrDialogs.confirm("Update Flickr Metadata","Do you want to update Metadata?","Update","Cancel", "Force")
 
-    if (LrDialogs.confirm("Update Flickr Metadata","Do you want to update Metadata?","Sure","Cancel") == "ok")
-    then
-
-    -- enable progress bar
-
+    if action == "ok"  then
         updateProgress = LrProgressScope({
          title = "Update Flickr Metadata",
         })
             updateProgress:setCancelable(true)
-            UpdateFlickrMetadata.getPhotos()
+            UpdateFlickrMetadata.getPhotos(false)
+    elseif action == "other" then
+        updateProgress = LrProgressScope({
+            title = "Update Flickr Metadata",
+        })
+        updateProgress:setCancelable(true)
+        UpdateFlickrMetadata.getPhotos(true)
     end
+
 end
 
-function UpdateFlickrMetadata.getPhotos()
+function UpdateFlickrMetadata.getPhotos(force)
     local catalog = LrApplication.activeCatalog()
 
 
@@ -75,7 +79,7 @@ function UpdateFlickrMetadata.getPhotos()
                         tmpurl = publishedPhoto:getRemoteUrl()
                         tmpphoto = publishedPhoto:getPhoto()
 
-                        if tmpphoto:getPropertyForPlugin(_PLUGIN,"remoteid") == nil then
+                        if ( tmpphoto:getPropertyForPlugin(_PLUGIN,"remoteid") == nil) or force == true then
 
                             if tmpid == nil then
                                 tmpid = "-"
@@ -89,6 +93,7 @@ function UpdateFlickrMetadata.getPhotos()
                                 catalog:withWriteAccessDo( "UpdateMetada", function( context )
 
                                     UpdateFlickrMetadata.setBBCode(tmpjson, tmpphoto, tmpid, tmpurl)
+                                    publishedPhoto:setEditedFlag( false )
                                     count = count +1
 
                                 -- myLogger:trace( "-> updated")
@@ -124,6 +129,7 @@ function UpdateFlickrMetadata.setBBCode(json, tmpphoto, tmpid, tmpurl)
 
 
     local sizes = JSON:decode(json)
+    if sizes == nil then return end
     local size = { sizes.sizes.size }
     -- myLogger:trace(Inspect.inspectTable(size))
     for i, line in ipairs(size) do
@@ -142,7 +148,7 @@ function UpdateFlickrMetadata.setBBCode(json, tmpphoto, tmpid, tmpurl)
 
         end
 
-    end
+end
 
     tmpphoto:setPropertyForPlugin(_PLUGIN,"remoteid",tmpid)
     tmpphoto:setPropertyForPlugin(_PLUGIN,"flickrurl",tmpurl)
