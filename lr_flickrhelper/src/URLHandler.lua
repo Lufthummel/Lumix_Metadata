@@ -2,7 +2,7 @@ local LrDialogs = import "LrDialogs"
 
 require "FlickrOAuth"
 local logger = import 'LrLogger'( 'FlickrAPI' )
-logger:enable('logfile')
+-- logger:enable('logfile')
 
 
 return {

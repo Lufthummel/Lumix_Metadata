@@ -26,7 +26,7 @@ local bind = LrView.bind
 local share = LrView.share
 
 local logger = import 'LrLogger'( 'FlickrOAuth' )
-logger:enable('logfile')
+-- logger:enable('logfile')
 
 --move the OAuth stuff to Global --
 

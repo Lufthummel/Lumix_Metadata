@@ -88,7 +88,7 @@ function UpdateFlickrMetadata.getPhotos(force)
                                 tmpjson = FlickrAPI.getSizes( tmpid )
 
                                 if tmpurl == nil then tmpurl = "-" end
-                                myLogger:trace( "id = " .. tmpid .. " url = " .. tmpurl )
+                                -- myLogger:trace( "id = " .. tmpid .. " url = " .. tmpurl )
 
                                 catalog:withWriteAccessDo( "UpdateMetada", function( context )
 
@@ -127,28 +127,53 @@ function UpdateFlickrMetadata.setBBCode(json, tmpphoto, tmpid, tmpurl)
     local large = ""
     local original = ""
 
+    local status = ""
+    local size
+
 
     local sizes = JSON:decode(json)
     if sizes == nil then return end
-    local size = { sizes.sizes.size }
-    -- myLogger:trace(Inspect.inspectTable(size))
-    for i, line in ipairs(size) do
-        for i, subline in ipairs(line) do
+    -- myLogger:trace("-> Status " .. sizes["stat"])
 
-            if subline.label == "Medium" then
-                medium = subline.source
-            elseif subline.label == "Large" then
-                large = subline.source
-            elseif subline.label == "Original" then
-                original = subline.source
-            end
-
-            -- myLogger:trace(Inspect.inspectTable(subline))
-            -- myLogger:trace("-> Metadata " .. subline.label)
-
+    if pcall(function () status = sizes["stat"] end ) then
+        if status ~= "ok" then
+            myLogger:trace("-> Status " .. sizes["stat"])
+            myLogger:trace("-> id =  " .. tmpid)
+            return
         end
 
-end
+    else
+        myLogger:trace("-> problem in pcall ")
+        myLogger:trace("-> id =  " .. tmpid)
+        return
+    end
+
+    --local size = { sizes.sizes.size }
+
+    if pcall(function () size = { sizes.sizes.size } end ) then
+
+        -- myLogger:trace(Inspect.inspectTable(size))
+        for i, line in ipairs(size) do
+            for i, subline in ipairs(line) do
+
+                if subline.label == "Medium" then
+                    medium = subline.source
+                elseif subline.label == "Large" then
+                    large = subline.source
+                elseif subline.label == "Original" then
+                    original = subline.source
+                end
+
+                -- myLogger:trace(Inspect.inspectTable(subline))
+                -- myLogger:trace("-> Metadata " .. subline.label)
+
+            end
+
+        end
+    else
+        return
+    end
+
 
     tmpphoto:setPropertyForPlugin(_PLUGIN,"remoteid",tmpid)
     tmpphoto:setPropertyForPlugin(_PLUGIN,"flickrurl",tmpurl)
@@ -173,7 +198,7 @@ end
     local bbcode = string.format("[url=%s][img]%s[/img][/url]\n[url=%s]%s[/url]", tmpurl,
                     large, tmpurl, title)
 
-    myLogger:trace(bbcode .. cr .. bbextra)
+    -- myLogger:trace(bbcode .. cr .. bbextra)
 
     tmpphoto:setPropertyForPlugin(_PLUGIN,"bbshort",bbcode)
     tmpphoto:setPropertyForPlugin(_PLUGIN,"bblong",bbcode .. cr .. bbextra)

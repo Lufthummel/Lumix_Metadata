@@ -27,7 +27,7 @@ local LrLogger = import 'LrLogger'
 local prefs = import 'LrPrefs'.prefsForPlugin()
 
 local myLogger = LrLogger( 'libraryLogger' )
-myLogger:enable( "logfile" ) -- or "logfile"
+-- myLogger:enable( "logfile" ) -- or "logfile"
 
 
 

@@ -6,9 +6,17 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/.idea/workspace.xml" afterPath="$PROJECT_DIR$/lr_flickrhelper/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build.number" afterPath="$PROJECT_DIR$/lr_flickrhelper/build.number" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/FlickrAPI.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/FlickrAPI.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/FlickrOAuth.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/FlickrOAuth.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/Helper.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/Helper.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/Info.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/Info.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/URLHandler.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/URLHandler.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/UpdateFlickrMetadata.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/UpdateFlickrMetadata.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/FlickrAPI.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/FlickrAPI.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/FlickrOAuth.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/FlickrOAuth.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/Helper.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/Helper.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/Info.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/Info.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/URLHandler.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/URLHandler.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/UpdateFlickrMetadata.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/UpdateFlickrMetadata.lua" />
     </list>
     <ignored path="Lumix_Metadata.iws" />

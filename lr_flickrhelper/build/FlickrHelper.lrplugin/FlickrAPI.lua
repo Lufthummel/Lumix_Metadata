@@ -10,7 +10,7 @@ local LrLogger = import 'LrLogger'
 local LrHttp = import 'LrHttp'
 
 local myLogger = LrLogger( 'libraryLogger' )
-myLogger:enable( "logfile" ) -- or "logfile"
+-- myLogger:enable( "logfile" ) -- or "logfile"
 
 
 FlickrAPI = {}
@@ -20,7 +20,7 @@ FlickrAPI = {}
 -- returns the  the json file
 function FlickrAPI.getSizes( flickrid )
     local url = string.format( 'https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=%s&photo_id=%s&format=json&nojsoncallback=1', _G.FLICKRCONSUMERKEY, flickrid )
-    myLogger:trace( "url = " .. url )
+    -- myLogger:trace( "url = " .. url )
 
     local result, hdrs = LrHttp.get( url, headers )
     if result == nil then result = "-" end
