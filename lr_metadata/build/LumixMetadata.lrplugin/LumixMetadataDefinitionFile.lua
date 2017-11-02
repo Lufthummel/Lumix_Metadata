@@ -64,6 +64,26 @@ return {
 
 		},
 
+        {
+            id = 'fOV',
+            title = LOC "$$$/LumixMetadata/AFPointPosition=FOV",
+            dataType = 'string',
+            searchable = true,
+            browsable = true,
+            version = 1,
+
+        },
+
+        {
+            id = 'hyperFocal',
+            title = LOC "$$$/LumixMetadata/AFPointPosition=Hyperfocal Distance",
+            dataType = 'string',
+            searchable = true,
+            browsable = true,
+            version = 1,
+
+        },
+
 		{
 			id = 'aFPointPosition',
 			title = LOC "$$$/LumixMetadata/AFPointPosition=AF Point Position",
@@ -237,6 +257,6 @@ return {
 
 	},
 	
-	schemaVersion = 1,
+	schemaVersion = 2,
 
 }

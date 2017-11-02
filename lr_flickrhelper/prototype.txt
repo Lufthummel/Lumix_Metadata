@@ -28,3 +28,12 @@ if ru == nil then ru = "-" end
 end
 
 return x
+
+
+-- BBCode
+
+[url=https://flic.kr/p/Vdjj4P][img]https://c1.staticflickr.com/5/4270/34926279445_63b7d91412_b.jpg[/img][/url]
+[url=https://flic.kr/p/Vdjj4P]Finale?[/url] by [url=https://www.flickr.com/photos/lufthummel/]Holger Kremmin[/url], auf Flickr
+
+
+bbcode = "[url=%s][img]%s[/img][/url]\n[url=%s]%s[/url]"

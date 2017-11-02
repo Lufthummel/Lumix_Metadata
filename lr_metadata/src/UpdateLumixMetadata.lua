@@ -37,7 +37,7 @@ function UpdateLumixMetadata.showUpdateDialog()
         updateProgress = LrProgressScope({
          title = "Update Lumix Metadata",
         })
-        updateProgress:setCancelable(false)
+        updateProgress:setCancelable(true)
 
         UpdateLumixMetadata.getPhotos()
     end
@@ -62,6 +62,14 @@ function UpdateLumixMetadata.getPhotos()
         myLogger:trace( "-> getPhotos:startIterating, # " .. totalphotos)
 
         for p,photo in ipairs(photos) do
+
+            if updateProgress:isCanceled() then
+                updateProgress:done()
+                -- myLogger:trace( "-> cancelled")
+                return
+
+            end
+
             t = t +1
             path = photo:getRawMetadata("path")
             fname = photo:getFormattedMetadata("fileName")
@@ -76,9 +84,10 @@ function UpdateLumixMetadata.getPhotos()
             myLogger:trace( "updated" .. t)
             updateProgress:setPortionComplete(t, totalphotos)
         end
+        updateProgress:done()
     end)
 
-    updateProgress:done()
+
 end
 
 function JSON:onDecodeError(message, text, location, etc)
@@ -105,6 +114,9 @@ function UpdateLumixMetadata.setMetadata(m,p)
             if (meta["FocusMode"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"focusMode",tostring(meta["FocusMode"])) end
             if (meta["AFAreaMode"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"aFAreaMode",tostring(meta["AFAreaMode"])) end
             if (meta["BurstSpeed"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"burstSpeed",tostring(meta["BurstSpeed"]) .. " Images/s") end
+
+            if (meta["FOV"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"fOV",tostring(meta["FOV"])) end
+            if (meta["HyperfocalDistance"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"hyperFocal",tostring(meta["HyperfocalDistance"])) end
 
             if (meta["AccelerometerZ"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"accelerometerz",tostring(meta["AccelerometerZ"])) end
             if (meta["AccelerometerX"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"accelerometerx",tostring(meta["AccelerometerX"])) end

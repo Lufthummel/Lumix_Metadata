@@ -26,24 +26,24 @@ return {
 
 	LrSdkVersion = 6.0,
 
-	LrToolkitIdentifier = 'de.minaxsoft.lumixmetadata',
+	LrToolkitIdentifier = 'com.minaxsoft.lrdevmeta',
 	LrLibraryMenuItems = {
-		title = LOC "$$$/LumixMetadata/MenuEntry=Update Lumix Metadata", -- The display text for the menu item
-		file = "UpdateLumixMetadata.lua", -- The script that runs when the item is selected
+		title = LOC "$$$/LRDevMeta/MenuEntry=Update Develop Metadata", -- The display text for the menu item
+		file = "UpdateLRDevMetadata.lua", -- The script that runs when the item is selected
 		enabledWhen = "photosSelected",
 	},
-	LrPluginName = "Lumix Metadata",
+	LrPluginName = "LR DevMeta",
 
 	-- Add the Metadata Tagset File
 	LrMetadataTagsetFactory = {
-		'LumixMetadataTagset.lua'
+		'LRDevMetaTagset.lua'
 	},
 
 	LrPluginInfoProvider = 'PluginInfoProvider.lua',
 	LrInitPlugin = 'PluginInit.lua',
 
-	LrMetadataProvider = 'LumixMetadataDefinitionFile.lua',
+	LrMetadataProvider = 'LRDevMetaDefinitionFile.lua',
 
-	VERSION = { major=0, minor=9, revision=2, build=72}
+	VERSION = { major=1, minor=0, revision=0, build=24}
 
 }

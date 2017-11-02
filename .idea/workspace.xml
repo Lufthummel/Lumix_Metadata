@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9da78845-2a38-4761-b225-0748c9a65105" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/dist/FlickrHelper.lrplugin.zip" afterPath="$PROJECT_DIR$/lr_flickrhelper/dist/FlickrHelper.lrplugin.zip" />
+    <list default="true" id="9da78845-2a38-4761-b225-0748c9a65105" name="Default" comment="release">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/dist/LumixMetadata.lrplugin.zip" afterPath="$PROJECT_DIR$/lr_metadata/dist/LumixMetadata.lrplugin.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/.idea/workspace.xml" afterPath="$PROJECT_DIR$/lr_flickrhelper/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build.number" afterPath="$PROJECT_DIR$/lr_flickrhelper/build.number" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/FlickrAPI.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/FlickrAPI.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/FlickrOAuth.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/FlickrOAuth.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/Helper.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/Helper.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/Info.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/Info.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/URLHandler.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/URLHandler.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/UpdateFlickrMetadata.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/build/FlickrHelper.lrplugin/UpdateFlickrMetadata.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/FlickrAPI.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/FlickrAPI.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/FlickrOAuth.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/FlickrOAuth.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/Helper.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/Helper.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/Info.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/Info.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/URLHandler.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/URLHandler.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/src/UpdateFlickrMetadata.lua" afterPath="$PROJECT_DIR$/lr_flickrhelper/src/UpdateFlickrMetadata.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_flickrhelper/prototype.txt" afterPath="$PROJECT_DIR$/lr_flickrhelper/prototype.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build.number" afterPath="$PROJECT_DIR$/lr_metadata/build.number" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/Helper.lua" afterPath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/Helper.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/Info.lua" afterPath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/Info.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/LumixMetadataDefinitionFile.lua" afterPath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/LumixMetadataDefinitionFile.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/UpdateLumixMetadata.lua" afterPath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/UpdateLumixMetadata.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/src/Helper.lua" afterPath="$PROJECT_DIR$/lr_metadata/src/Helper.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/src/Info.lua" afterPath="$PROJECT_DIR$/lr_metadata/src/Info.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/src/LumixMetadataDefinitionFile.lua" afterPath="$PROJECT_DIR$/lr_metadata/src/LumixMetadataDefinitionFile.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/src/UpdateLumixMetadata.lua" afterPath="$PROJECT_DIR$/lr_metadata/src/UpdateLumixMetadata.lua" />
     </list>
     <ignored path="Lumix_Metadata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,58 +36,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Lumix_Metadata.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lr_metadata/Lumix_Metadata.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateLumixMetadata.lua" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lr_metadata/src/UpdateLumixMetadata.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="104" column="27" lean-forward="false" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Helper.lua" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lr_metadata/src/Helper.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
-              <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PluginInfoProvider.lua" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lr_metadata/src/PluginInfoProvider.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PluginInit.lua" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lr_metadata/src/PluginInit.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PluginManager.lua" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lr_metadata/src/PluginManager.lua">
+      <file leaf-file-name="build.number" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lr_devmeta/build.number">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -99,10 +47,90 @@
         </entry>
       </file>
       <file leaf-file-name="Info.lua" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lr_metadata/src/Info.lua">
+        <entry file="file://$PROJECT_DIR$/lr_devmeta/src/Info.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+            <state relative-caret-position="420">
+              <caret line="28" column="50" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateFlickrMetadata.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lr_flickrhelper/src/UpdateFlickrMetadata.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-483">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImportVideo.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/ImportVideo.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1382">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PluginInit.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lr_devmeta/src/PluginInit.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PluginManager.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lr_devmeta/src/PluginManager.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateLRDevMetadata.lua" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lr_devmeta/src/UpdateLRDevMetadata.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LRDevMetaDefinitionFile.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lr_devmeta/src/LRDevMetaDefinitionFile.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LRDevMetaTagset.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lr_devmeta/src/LRDevMetaTagset.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PluginInfoProvider.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lr_devmeta/src/PluginInfoProvider.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,6 +144,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>my</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,13 +171,22 @@
         <option value="$PROJECT_DIR$/src/PluginManager.lua" />
         <option value="$PROJECT_DIR$/src/LumixMetadataDefinitionFile.lua" />
         <option value="$PROJECT_DIR$/src/UpdateLumixMetadata.lua" />
+        <option value="$PROJECT_DIR$/lr_metadata/src/Helper.lua" />
+        <option value="$PROJECT_DIR$/lr_metadata/src/LumixMetadataDefinitionFile.lua" />
+        <option value="$PROJECT_DIR$/lr_metadata/src/UpdateLumixMetadata.lua" />
+        <option value="$PROJECT_DIR$/lr_devmeta/build.xml" />
+        <option value="$PROJECT_DIR$/lr_devmeta/src/Info.lua" />
+        <option value="$PROJECT_DIR$/lr_devmeta/src/PluginManager.lua" />
+        <option value="$PROJECT_DIR$/lr_devmeta/src/LRDevMetaDefinitionFile.lua" />
+        <option value="$PROJECT_DIR$/lr_devmeta/src/LRDevMetaTagset.lua" />
+        <option value="$PROJECT_DIR$/lr_devmeta/src/UpdateLRDevMetadata.lua" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="73" />
-    <option name="y" value="290" />
-    <option name="width" value="2084" />
+    <option name="x" value="424" />
+    <option name="y" value="140" />
+    <option name="width" value="1998" />
     <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
@@ -162,6 +204,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
@@ -186,7 +229,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lr_metadata" />
+              <option name="myItemId" value="lr_devmeta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -200,7 +243,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lr_metadata" />
+              <option name="myItemId" value="lr_devmeta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -210,7 +253,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,6 +292,34 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -508,7 +578,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="290" width="2084" height="1000" extended-state="1" />
+    <frame x="424" y="140" width="1998" height="1000" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -525,10 +595,10 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17042115" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18251534" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957885" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22771792" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15337424" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -567,11 +637,43 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-    <buildFile url="file://$PROJECT_DIR$/lr_metadata/build.xml">
+    <buildFile url="file://$PROJECT_DIR$/lr_devmeta/build.xml">
       <expanded value="true" />
     </buildFile>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lr_metadata/src/PluginInit.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_metadata/src/PluginManager.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_metadata/src/Info.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_metadata/src/Helper.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lr_metadata/Lumix_Metadata.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -682,30 +784,6 @@
     <entry file="file://$PROJECT_DIR$/resources/TranslatedStrings_de.txt" />
     <entry file="file://$PROJECT_DIR$/src/LumixMetadataDefinitionFile.lua" />
     <entry file="file://$PROJECT_DIR$/src/UpdateLumixMetadata.lua" />
-    <entry file="file://$PROJECT_DIR$/lr_metadata/Lumix_Metadata.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lr_metadata/src/PluginInfoProvider.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lr_metadata/src/Helper.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lr_metadata/src/Info.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -722,18 +800,154 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lr_metadata/src/UpdateLumixMetadata.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="104" column="27" lean-forward="false" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lr_metadata/src/PluginInit.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_metadata/Lumix_Metadata.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_metadata/src/Helper.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="55" column="27" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_metadata/src/LumixMetadataDefinitionFile.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="77" column="28" lean-forward="false" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/Lumix_DevMeta.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_metadata/src/PluginInfoProvider.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-311">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/JSON.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/PluginInit.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_metadata/src/UpdateLumixMetadata.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="99" column="19" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/build.number">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_flickrhelper/src/UpdateFlickrMetadata.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-483">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/ImportVideo.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1382">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/PluginInfoProvider.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/PluginManager.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/Info.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="50" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/LRDevMetaTagset.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/LRDevMetaDefinitionFile.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/UpdateLRDevMetadata.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding />
         </state>
       </provider>
