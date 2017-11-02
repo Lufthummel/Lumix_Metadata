@@ -5,11 +5,6 @@
 -- Time: 19:42
 -- To change this template use File | Settings | File Templates.
 --
-
-require ('Helper.lua')
-local LrPathUtils = import 'LrPathUtils'
-local JSON = assert(loadfile (LrPathUtils.child(_PLUGIN.path, "JSON.lua")))() -- one-time load of the routines
-
 local LrDialogs = import 'LrDialogs'
 local LrApplication = import 'LrApplication'
 local LrLogger = import 'LrLogger'

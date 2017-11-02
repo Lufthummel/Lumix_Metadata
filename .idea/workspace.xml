@@ -5,7 +5,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_devmeta/dist/LumixDevMeta.lrplugin.zip" afterPath="$PROJECT_DIR$/lr_devmeta/dist/LumixDevMeta.lrplugin.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_devmeta/build.number" afterPath="$PROJECT_DIR$/lr_devmeta/build.number" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_devmeta/build/LumixDevMeta.lrplugin/Info.lua" afterPath="$PROJECT_DIR$/lr_devmeta/build/LumixDevMeta.lrplugin/Info.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_devmeta/build/LumixDevMeta.lrplugin/PluginInit.lua" afterPath="$PROJECT_DIR$/lr_devmeta/build/LumixDevMeta.lrplugin/PluginInit.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_devmeta/build/LumixDevMeta.lrplugin/UpdateLRDevMetadata.lua" afterPath="$PROJECT_DIR$/lr_devmeta/build/LumixDevMeta.lrplugin/UpdateLRDevMetadata.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_devmeta/src/Info.lua" afterPath="$PROJECT_DIR$/lr_devmeta/src/Info.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_devmeta/src/PluginInit.lua" afterPath="$PROJECT_DIR$/lr_devmeta/src/PluginInit.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_devmeta/src/UpdateLRDevMetadata.lua" afterPath="$PROJECT_DIR$/lr_devmeta/src/UpdateLRDevMetadata.lua" />
     </list>
     <ignored path="Lumix_Metadata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Info.lua" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Info.lua" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lr_devmeta/src/Info.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="50" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="50" />
+            <state relative-caret-position="690">
+              <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -69,8 +73,8 @@
       <file leaf-file-name="PluginInit.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lr_devmeta/src/PluginInit.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateLRDevMetadata.lua" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UpdateLRDevMetadata.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lr_devmeta/src/UpdateLRDevMetadata.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+            <state relative-caret-position="406">
+              <caret line="173" column="13" lean-forward="false" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -165,11 +169,12 @@
         <option value="$PROJECT_DIR$/lr_metadata/src/LumixMetadataDefinitionFile.lua" />
         <option value="$PROJECT_DIR$/lr_metadata/src/UpdateLumixMetadata.lua" />
         <option value="$PROJECT_DIR$/lr_devmeta/build.xml" />
-        <option value="$PROJECT_DIR$/lr_devmeta/src/Info.lua" />
         <option value="$PROJECT_DIR$/lr_devmeta/src/PluginManager.lua" />
         <option value="$PROJECT_DIR$/lr_devmeta/src/LRDevMetaDefinitionFile.lua" />
         <option value="$PROJECT_DIR$/lr_devmeta/src/LRDevMetaTagset.lua" />
         <option value="$PROJECT_DIR$/lr_devmeta/src/UpdateLRDevMetadata.lua" />
+        <option value="$PROJECT_DIR$/lr_devmeta/src/PluginInit.lua" />
+        <option value="$PROJECT_DIR$/lr_devmeta/src/Info.lua" />
       </list>
     </option>
   </component>
@@ -854,14 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/PluginInit.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lr_metadata/src/UpdateLumixMetadata.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -894,6 +891,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/UpdateLRDevMetadata.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="173" column="13" lean-forward="false" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/PluginInit.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lr_devmeta/src/PluginInfoProvider.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -906,14 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/Info.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="50" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -934,10 +939,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/UpdateLRDevMetadata.lua">
+    <entry file="file://$PROJECT_DIR$/lr_devmeta/src/Info.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        <state relative-caret-position="690">
+          <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
           <folding />
         </state>
       </provider>

@@ -9,18 +9,3 @@ local LrPrefs = import "LrPrefs"
 
 local pluginPrefs = LrPrefs.prefsForPlugin(_PLUGIN)
 
-if (pluginPrefs.exiftool == nil) then
-
-    _G.EXIFTOOLPATH = '/usr/local/bin/exiftool'
-
-else
-    _G.EXIFTOOLPATH = pluginPrefs.exiftool
-end
-
-if (pluginPrefs.tmppath == nil) then
-
-    _G.TMPPATH = '/tmp/'
-
-else
-    _G.TMPPATH = pluginPrefs.tmppath
-end
