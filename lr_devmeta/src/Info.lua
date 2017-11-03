@@ -44,6 +44,6 @@ return {
 
 	LrMetadataProvider = 'LRDevMetaDefinitionFile.lua',
 
-	VERSION = { major=1, minor=0, revision=1, build=27}
+	VERSION = { major=1, minor=0, revision=1, build=33}
 
 }

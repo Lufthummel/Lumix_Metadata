@@ -16,6 +16,7 @@ local LrLogger = import 'LrLogger'
 local LrTasks = import 'LrTasks'
 local LrProgressScope = import 'LrProgressScope'
 local LrFunctionContext = import 'LrFunctionContext'
+local LrErrors = import 'LrErrors'
 
 local myLogger = LrLogger( 'libraryLogger' )
 myLogger:enable( "print" ) -- or "logfile"
@@ -92,7 +93,9 @@ end
 
 function JSON:onDecodeError(message, text, location, etc)
                 LrErrors.throwUserError("Internal Error: invalid JSON data" .. message .. text)
+
 end
+
 
 function UpdateLumixMetadata.setMetadata(m,p)
 
@@ -102,7 +105,18 @@ function UpdateLumixMetadata.setMetadata(m,p)
     m =m:gsub("%]"," ")
     myLogger:trace("-> Metadata " .. m)
 
-    local meta = JSON:decode(m)
+
+    local succ, meta = pcall(function()
+        return  JSON:decode(m)
+    end)
+
+    if succ then
+        -- doStuffWith(data)
+    else
+        LrDialogs.message("error processing " .. m)
+    end
+
+    -- meta = JSON:decode(m)
     if (meta ~= nil ) then
             -- myLogger:trace("-> Metadata Lookup " .. meta["ShutterType"])
             if (meta["ShutterType"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"shutterType",meta["ShutterType"]) end

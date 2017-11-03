@@ -31,24 +31,13 @@ return {
     items = {
         "com.adobe.filename",
         "com.adobe.originalFilename.ifDiffers",
-        "com.adobe.sidecars",
         "com.adobe.copyname",
         "com.adobe.folder",
         "com.adobe.filesize",
         "com.adobe.fileFormat",
         "com.adobe.metadataStatus",
         "com.adobe.metadataDate",
-        "com.adobe.audioAnnotation",
 
-        "com.adobe.allPluginMetadata",
-
-        "com.adobe.separator",
-
-        -- "com.adobe.rating",
-
-        -- "com.adobe.separator",
-
-        "com.adobe.colorLabels",
 
         "com.adobe.separator",
 
@@ -58,7 +47,7 @@ return {
         "com.adobe.separator",
         {
             formatter = "com.adobe.label",
-            label = LOC "$$$/CustomMetadata/Fields/ExifLabel=EXIF",
+            label = LOC "$$$/CustomMetadata/Fields/ExifLabel=LR EXIF",
         },
 
         "com.adobe.imageFileDimensions",		-- dimensions
@@ -85,86 +74,16 @@ return {
         "com.adobe.model",
         "com.adobe.serialNumber",
 
-        "com.adobe.userComment",
-
-        "com.adobe.artist",
-        "com.adobe.software",
-
-        "com.adobe.GPS",						-- gps
-        "com.adobe.GPSAltitude",
-        "com.adobe.GPSImgDirection",
-
 
         "com.adobe.separator",                  -- lumix
         {
             formatter = "com.adobe.label",
-            label = LOC "$$$/CustomMetadata/Fields/LumixInfoLabel=Lumix",
+            label = LOC "$$$/CustomMetadata/Fields/LumixInfoLabel=Lumix EXIF",
         },
 
-        "lumixId.*",
+        "de.minaxsoft.lumixmetadata.*",
+    }
 
-        --[[
-        "com.adobe.separator",
-        {
-            formatter = "com.adobe.label",
-            label = LOC "$$$/CustomMetadata/Fields/CreatorInfoLabel=Contact",
-        },
-
-        "com.adobe.creator",
-        { formatter = "com.adobe.creatorJobTitle", form = "shortTitle" },
-        { formatter = "com.adobe.creatorAddress", form = "shortTitle" },
-        { formatter = "com.adobe.creatorCity", form = "shortTitle" },
-        { formatter = "com.adobe.creatorState", form = "shortTitle" },
-        { formatter = "com.adobe.creatorZip", form = "shortTitle" },
-        { formatter = "com.adobe.creatorCountry", form = "shortTitle" },
-        { formatter = "com.adobe.creatorWorkPhone", form = "shortTitle" },
-        { formatter = "com.adobe.creatorWorkEmail", form = "shortTitle" },
-        { formatter = "com.adobe.creatorWorkWebsite", form = "shortTitle" },
-
-        --]]
-
-       -- "com.adobe.separator",
-       -- {
-       --     formatter = "com.adobe.label",
-       --     label = LOC "$$$/CustomMetadata/Fields/IPTCLabel=IPTC",
-       -- },
-
-        -- "com.adobe.headline",
-        -- "com.adobe.iptcSubjectCode",
-        -- "com.adobe.descriptionWriter",
-        -- "com.adobe.category",
-        -- "com.adobe.supplementalCategories",
-
-        --{
-        --    formatter = "com.adobe.label",
-        --    label = LOC "$$$/CustomMetadata/Fields/FormalDescriptiveInfo=Image",
-        -- },
-        "com.adobe.dateCreated",
-        -- "com.adobe.intellectualGenre",
-        -- "com.adobe.scene",
-        -- "com.adobe.location",
-        -- "com.adobe.city",
-        -- "com.adobe.state",
-        -- "com.adobe.country",
-        -- "com.adobe.isoCountryCode",
-       -- {
-       --     formatter = "com.adobe.label",
-       --     label = LOC "$$$/CustomMetadata/Fields/Workflow=Workflow",
-       --  },
-        -- "com.adobe.jobIdentifier",
-        -- "com.adobe.instructions",
-        -- "com.adobe.provider",
-        -- "com.adobe.source",
-        {
-            formatter = "com.adobe.label",
-            label = LOC "$$$/CustomMetadata/Fields/Copyright=Copyright",
-        },
-        { "com.adobe.copyrightState", pruneRedundantFields = false },
-        "com.adobe.copyright",
-        "com.adobe.rightsUsageTerms",
-        "com.adobe.copyrightInfoURL",
-
-    },
 
 }
 
