@@ -53,8 +53,8 @@ function exiftool(file)
 
     local execpath = "/usr/local/bin/"
     local exec = "exiftool"
-    local param = " -j -a "
-    -- local param = " -j -Panasonic:all "
+    -- local param = " -j -a "
+    local param = " -j -Panasonic:all "
     -- local tmpfile ="/tmp/json.tmp"
     local tmpfile =_G.TMPPATH .. "json.tmp"
     myLogger:trace( "tmp: " .. tmpfile )

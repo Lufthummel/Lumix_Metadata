@@ -92,7 +92,7 @@ function UpdateLumixMetadata.getPhotos()
 end
 
 function JSON:onDecodeError(message, text, location, etc)
-                LrErrors.throwUserError("Internal Error: invalid JSON data" .. message .. text)
+                LrErrors.throwUserError("Internal Error: invalid JSON data" .. message .. location)
 
 end
 
@@ -106,6 +106,8 @@ function UpdateLumixMetadata.setMetadata(m,p)
     myLogger:trace("-> Metadata " .. m)
 
 
+    -- meta = JSON:decode(m)
+
     local succ, meta = pcall(function()
         return  JSON:decode(m)
     end)
@@ -115,6 +117,7 @@ function UpdateLumixMetadata.setMetadata(m,p)
     else
         LrDialogs.message("error processing " .. m)
     end
+
 
     -- meta = JSON:decode(m)
     if (meta ~= nil ) then
