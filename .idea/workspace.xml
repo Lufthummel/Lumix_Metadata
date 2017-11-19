@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9da78845-2a38-4761-b225-0748c9a65105" name="Default" comment="release">
+    <list default="true" id="9da78845-2a38-4761-b225-0748c9a65105" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/dist/LumixMetadata.lrplugin.zip" afterPath="$PROJECT_DIR$/lr_metadata/dist/LumixMetadata.lrplugin.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build.number" afterPath="$PROJECT_DIR$/lr_metadata/build.number" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/Helper.lua" afterPath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/Helper.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/Info.lua" afterPath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/Info.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/JSON.lua" afterPath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/JSON.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/UpdateLumixMetadata.lua" afterPath="$PROJECT_DIR$/lr_metadata/build/LumixMetadata.lrplugin/UpdateLumixMetadata.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/src/Helper.lua" afterPath="$PROJECT_DIR$/lr_metadata/src/Helper.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/src/Info.lua" afterPath="$PROJECT_DIR$/lr_metadata/src/Info.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/src/JSON.lua" afterPath="$PROJECT_DIR$/lr_metadata/src/JSON.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_metadata/src/UpdateLumixMetadata.lua" afterPath="$PROJECT_DIR$/lr_metadata/src/UpdateLumixMetadata.lua" />
     </list>
     <ignored path="Lumix_Metadata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -611,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1460890932571</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="bugfix - exiftool produces invalid json on certain file types if using -a">
+      <created>1511095353036</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1511095353036</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -665,7 +666,8 @@
     <MESSAGE value="updated dist" />
     <MESSAGE value="added some makernotes (pitch, gyros, flash, OIS)" />
     <MESSAGE value="release" />
-    <option name="LAST_COMMIT_MESSAGE" value="release" />
+    <MESSAGE value="bugfix - exiftool produces invalid json on certain file types if using -a" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix - exiftool produces invalid json on certain file types if using -a" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
