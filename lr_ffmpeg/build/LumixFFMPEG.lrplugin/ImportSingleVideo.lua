@@ -273,7 +273,7 @@ function ImportSingleVideo.showUpdateDialog()
                     currentFileName = getbasename(_G.FILEPATH)
                     caption = "Processing " .. _G.FILEPATH
                     ext = getextension(_G.FILEPATH)
-
+                    ext = string.upper(ext)
                     newPath = _G.FILEOUTPATH .. currentFileName .. "_" .. _G.FORMAT .. _G.SEP
 
 

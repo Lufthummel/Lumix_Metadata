@@ -210,7 +210,7 @@ function ImportVideo.showUpdateDialog()
                         currentFileName = getbasename(filePath)
                         caption = "Processing " .. currentFileName
                         ext = getextension(filePath)
-
+                        ext = string.upper(ext)
                         newPath = _G.LRPATH .. currentFileName .. "_" .. _G.FORMAT .. _G.SEP
 
                         if ( (ext == ".MP4") or (ext == ".MOV")) then
