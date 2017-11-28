@@ -140,6 +140,7 @@ function ffmpeg(file, filename, outpath, format, start, frame, number)
     local frameparam = ""
     local numberparam = ""
 
+    myLogger:trace("in ffmpeg methode")
 
     -- lua kann kein switch...
 
@@ -188,14 +189,16 @@ function ffmpeg(file, filename, outpath, format, start, frame, number)
     cmd = _G.FFMPEGPATH .. startparam .. " -i " .. quote .. file .. quote .. frameparam .. ffmpegparam .. numberparam .. quote .. outpath  .. filename .. "_" .. extension .. quote
     if WIN_ENV == true then
         cmd = quote .. cmd .. quote
+        myLogger:trace("(ffmpeg) -> Win = ")
     end
 
-    myLogger:trace("FFMPEG cmd = " .. cmd)
+    myLogger:trace("(ffmpeg) -> FFMPEG cmd = " .. cmd)
     result = LrTasks.execute( cmd )
-    myLogger:trace("FFMPEG result = " .. result)
+    myLogger:trace("(ffmpeg) -> FFMPEG result = " .. result)
 
     -- convert png to hq jpg
     if format == 'hq' then
+        myLogger:trace("(ffmpeg) -> hq erkannt ")
         cmd =  quote .. _G.CONVERTERPATH .. quote .. " mogrify -format jpg -quality 100 " .. quote .. outpath .. _G.SEP .. "*.*" .. quote
 
         if WIN_ENV == true then
@@ -203,14 +206,15 @@ function ffmpeg(file, filename, outpath, format, start, frame, number)
         end
 
 
-        myLogger:trace("Magick cmd = " .. cmd)
+        myLogger:trace("(ffmpeg) -> Magick cmd = " .. cmd)
 
         result = LrTasks.execute( cmd )
-        myLogger:trace("Magick result = " .. result)
+        myLogger:trace("(ffmpeg) -> Magick result = " .. result)
         -- delete png
 
         if WIN_ENV == true then
             LrFileUtils.delete(outpath .. _G.SEP .. "*.png")
+            myLogger:trace("(ffmpeg) -> deleted png")
         else
             deleteFiles(outpath, ".png")
         end

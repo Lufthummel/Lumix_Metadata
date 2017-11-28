@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9da78845-2a38-4761-b225-0748c9a65105" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/dist/LumixFFMPEG.lrplugin.zip" afterPath="$PROJECT_DIR$/lr_ffmpeg/dist/LumixFFMPEG.lrplugin.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/build.number" afterPath="$PROJECT_DIR$/lr_ffmpeg/build.number" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/Helper.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/Helper.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/ImportSingleVideo.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/ImportSingleVideo.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/ImportVideo.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/ImportVideo.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/Info.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/Info.lua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/src/Helper.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/src/Helper.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/src/ImportSingleVideo.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/src/ImportSingleVideo.lua" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/src/ImportVideo.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/src/ImportVideo.lua" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lr_ffmpeg/src/Info.lua" afterPath="$PROJECT_DIR$/lr_ffmpeg/src/Info.lua" />
     </list>
     <ignored path="Lumix_Metadata.iws" />
@@ -41,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Helper.lua" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Helper.lua" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/Helper.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1652">
-              <caret line="198" column="50" lean-forward="false" selection-start-line="198" selection-start-column="50" selection-end-line="198" selection-end-column="50" />
+            <state relative-caret-position="1060">
+              <caret line="216" column="52" lean-forward="false" selection-start-line="216" selection-start-column="52" selection-end-line="216" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -54,17 +53,17 @@
       <file leaf-file-name="ImportSingleVideo.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/ImportSingleVideo.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="275" column="43" lean-forward="false" selection-start-line="275" selection-start-column="43" selection-end-line="275" selection-end-column="43" />
+            <state relative-caret-position="587">
+              <caret line="293" column="31" lean-forward="false" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImportVideo.lua" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImportVideo.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/ImportVideo.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
+            <state relative-caret-position="420">
               <caret line="212" column="47" lean-forward="false" selection-start-line="212" selection-start-column="47" selection-end-line="212" selection-end-column="47" />
               <folding />
             </state>
@@ -183,10 +182,10 @@
         <option value="$PROJECT_DIR$/lr_metadata/src/JSON.lua" />
         <option value="$PROJECT_DIR$/lr_metadata/src/Helper.lua" />
         <option value="$PROJECT_DIR$/lr_metadata/src/UpdateLumixMetadata.lua" />
-        <option value="$PROJECT_DIR$/lr_ffmpeg/src/Helper.lua" />
         <option value="$PROJECT_DIR$/lr_ffmpeg/build/LumixFFMPEG.lrplugin/ImportSingleVideo.lua" />
-        <option value="$PROJECT_DIR$/lr_ffmpeg/src/ImportSingleVideo.lua" />
         <option value="$PROJECT_DIR$/lr_ffmpeg/src/ImportVideo.lua" />
+        <option value="$PROJECT_DIR$/lr_ffmpeg/src/Helper.lua" />
+        <option value="$PROJECT_DIR$/lr_ffmpeg/src/ImportSingleVideo.lua" />
       </list>
     </option>
   </component>
@@ -918,14 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/Helper.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1652">
-          <caret line="198" column="50" lean-forward="false" selection-start-line="198" selection-start-column="50" selection-end-line="198" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/PluginInfoProvider.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -966,18 +957,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/ImportSingleVideo.lua">
+    <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/ImportVideo.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="275" column="43" lean-forward="false" selection-start-line="275" selection-start-column="43" selection-end-line="275" selection-end-column="43" />
+          <caret line="212" column="47" lean-forward="false" selection-start-line="212" selection-start-column="47" selection-end-line="212" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/ImportVideo.lua">
+    <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/ImportSingleVideo.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="212" column="47" lean-forward="false" selection-start-line="212" selection-start-column="47" selection-end-line="212" selection-end-column="47" />
+        <state relative-caret-position="587">
+          <caret line="293" column="31" lean-forward="false" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lr_ffmpeg/src/Helper.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1060">
+          <caret line="216" column="52" lean-forward="false" selection-start-line="216" selection-start-column="52" selection-end-line="216" selection-end-column="52" />
           <folding />
         </state>
       </provider>
