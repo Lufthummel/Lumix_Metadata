@@ -1,0 +1,39 @@
+
+local LrApplication = import 'LrApplication'
+local catalog = LrApplication.activeCatalog()
+
+
+local s = ""
+local x = ""
+local ru = ""
+local ri = ""
+local col = catalog:getPublishServices( nil )
+
+for i,c in ipairs(col) do
+    -- s = s .. " " .. c:getName()
+    s = c:getName()
+    if s == "Flickr" then
+      for i, cc in ipairs(c:getChildCollections()) do
+      	
+      	for i, pc in ipairs(cc:getPublishedPhotos()) do
+                ri = pc:getRemoteId()
+                ru = pc:getRemoteUrl()
+if ri == nil then ri = "-" end
+if ru == nil then ru = "-" end 
+      		x = x ..  " " .. ri .. " : " ..  ru
+      	end
+        -- x = x ..  " " .. cc:getName()
+       end
+   end
+end
+
+return x
+
+
+-- BBCode
+
+[url=https://flic.kr/p/Vdjj4P][img]https://c1.staticflickr.com/5/4270/34926279445_63b7d91412_b.jpg[/img][/url]
+[url=https://flic.kr/p/Vdjj4P]Finale?[/url] by [url=https://www.flickr.com/photos/lufthummel/]Holger Kremmin[/url], auf Flickr
+
+
+bbcode = "[url=%s][img]%s[/img][/url]\n[url=%s]%s[/url]"
