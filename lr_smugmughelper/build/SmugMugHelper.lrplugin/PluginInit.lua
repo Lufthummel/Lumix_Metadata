@@ -6,7 +6,7 @@
 -- To change this template use File | Settings | File Templates.
 --
 
-require 'keys'  -- consumer & secret, values are not stored in GIT
+require 'keys.lua'  -- consumer & secret, values are not stored in GIT
 
 local LrPrefs = import "LrPrefs"
 local pluginPrefs = LrPrefs.prefsForPlugin(_PLUGIN)

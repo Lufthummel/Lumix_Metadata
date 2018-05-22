@@ -7,6 +7,6 @@
 --
 
 -- OAuth constants
-_G.SMUGMUGCONSUMERKEY = "add here"
-_G.SMUGMUGSECRETKEY = "add here"
+_G.SMUGMUGCONSUMERKEY = "FFWzzHfthdK99QXrqJpPkH4xgp2jVj4t"
+_G.SMUGMUGSECRETKEY = "fwjqhknsV2vRsxNqQGPKXTcjvKbdfTDh3c7fFn6jC9fKh5JwXFVt9M8DQ5ZZ72gT"
 

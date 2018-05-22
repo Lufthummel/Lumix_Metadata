@@ -55,7 +55,8 @@
 
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
-
+local logger = import 'LrLogger'( 'libraryLogger' )
+logger:enable('logfile')
 
 --
 -- Return a W32 object for the number zero
@@ -427,6 +428,7 @@ local function hex_to_binary(hex)
 end
 
 function sha1_binary(msg)
+
     return hex_to_binary(sha1(msg))
 end
 
@@ -710,6 +712,7 @@ function hmac_sha1(key, text)
 end
 
 function hmac_sha1_binary(key, text)
+
     return hex_to_binary(hmac_sha1(key, text))
 end
 

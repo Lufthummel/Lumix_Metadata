@@ -15,6 +15,7 @@ local LrHttp = import 'LrHttp'
 local LrMD5 = import 'LrMD5'
 local LrStringUtils = import "LrStringUtils"
 local LrView = import 'LrView'
+local LrTasks = import 'LrTasks'
 local LrXml = import 'LrXml'
 
 local prefs = import 'LrPrefs'.prefsForPlugin()
@@ -32,11 +33,11 @@ local USER_AUTH_URL = "https://api.smugmug.com/services/oauth/1.0a/authorize"
 local ACCESS_TOKEN_URL = "https://api.smugmug.com/services/oauth/1.0a/getAccessToken"
 local CALLBACK_URL = "lightroom://com.minaxsoft.smugmughelper"
 
-local CONSUMER_KEY = _G.SMUGMUGCONSUMERKEY
-local CONSUMER_SECRET = ""
-local SALT = ""
 
-require "sha1.lua"
+local SALT = "0815"
+
+require 'sha1.lua'
+require 'keys.lua'
 
 SmugMugOAuth = {}
 
@@ -47,7 +48,7 @@ local appearsAlive
 --------------------------------------------------------------------------------
 
 local function formatError( nativeErrorCode )
-    return LOC "$$$/FlickrHelper/Error/NetworkFailure=Could not connect Flickr. Please check your Internet connection."
+    return LOC "$$$/SmugMugHelper/Error/NetworkFailure=Could not connect SmugMug. Please check your Internet connection."
 end
 
 --------------------------------------------------------------------------------
@@ -58,17 +59,25 @@ end
 
 --------------------------------------------------------------------------------
 
---[[ Some Handy Constants ]]--
+-- support functions --
 
 -- Cocaoa time of 0 is unix time 978307200
 local COCOA_TIMESHIFT = 978307200
 
---[[ Some Handy Helper Functions ]]--
+--[[ Some Handy Helper Functions
 local function oauth_encode( value )
     return tostring( string.gsub( value, "[^-._~a-zA-Z0-9]",
         function( c )
             return string.format( "%%%02x", string.byte( c ) ):upper()
         end ) )
+end
+]]--
+local function oauth_encode(val)
+    return tostring(val:gsub('[^-._~a-zA-Z0-9]', function(letter)
+        return string.format("%%%02x", letter:byte()):upper()
+    end))
+    -- The wrapping tostring() above is to ensure that only one item is returned (it's easy to
+    -- forget that gsub() returns multiple items
 end
 
 local function unix_timestamp()
@@ -354,21 +363,87 @@ end
 function SmugMugOAuth.authorize()
 
     logger:info("starting oauth process")
-    --LrDialogs.message("Start Authorization process?")
-    --local requestUrl =
+
 
     -- required arguments
-    local args = {
+    local http_method = "GET"
+    local consumer_key = _G.SMUGMUGCONSUMERKEY
+    local oauth_args = {
         oauth_callback = CALLBACK_URL,
-        oauth_consumer_key = CONSUMER_SECRET,
-        oauth_version= "1.0" ,
+        oauth_consumer_key = consumer_key,
+        oauth_nonce = generate_nonce(),
+        oauth_version= "1.0",
+        oauth_signature_method = "PLAINTEXT", --"HMAC-SHA1",
+        oauth_timestamp = unix_timestamp(),
     }
 
-    local query_string, auth_header = oauth_sign( "GET", REQUEST_TOKEN_URL, args )
+    -- encode all keys and values
+    local keys_and_values = { }
 
-    logger:info("key = " .. CONSUMER_KEY)
-    logger:info("request = " .. query_string)
+    for key, val in pairs(oauth_args) do
+        table.insert(keys_and_values,  {
+            key = oauth_encode(key),
+            val = oauth_encode(val)
+        })
+    end
+
+    -- Sort by key first, then value
+    table.sort(keys_and_values, function(a,b)
+        if a.key < b.key then
+            return true
+        elseif a.key > b.key then
+            return false
+        else
+            return a.val < b.val
+        end
+    end)
+
+    -- Now combine key and value into key=value
+    local key_value_pairs = { }
+    for _, rec in pairs(keys_and_values) do
+        table.insert(key_value_pairs, rec.key .. "=" .. rec.val)
+    end
+
+    -- query string for signing,
+
+    local query_string_except_signature = table.concat(key_value_pairs, "&")
+    local SignatureBaseString = http_method .. '&' .. oauth_encode(REQUEST_TOKEN_URL) .. '&' .. oauth_encode(query_string_except_signature)
+    local key = oauth_encode(_G.SMUGMUGSECRETKEY) -- .. '&' .. oauth_encode(token_secret)
+
+    -- Now have our text and key for HMAC-SHA1 signing
+    local hmac_binary = hmac_sha1_binary(key, SignatureBaseString)
+    -- Base64 encode it
+    local hmac_b64 = LrStringUtils.encodeBase64(hmac_binary)
+    -- Now append the signature to end up with the final query string
+
+    local plaintext_sig = oauth_encode(_G.SMUGMUGSECRETKEY .. '&')
+    local query_string = REQUEST_TOKEN_URL .. "?" .. query_string_except_signature .. '&oauth_signature=' .. plaintext_sig --oauth_encode(hmac_b64)
+
+    logger:info("request for signing  = " .. SignatureBaseString)
+
     LrDialogs.message("Start Authorization process?" .. query_string)
+
+    -- request token url returns these two tokens
+    local oauth_token = ""
+    local oauth_token_secret = ""
+
+    LrTasks.startAsyncTask( function()
+        local result, headers = LrHttp.get( query_string    )
+        logger:info("request url response " .. result )
+
+        if not result or not headers.status then
+            LrErrors.throwUserError( "Could not connect to SmugMug. Please make sure you are connected to the internet and try again." )
+        end
+
+        oauth_token = result:match( "oauth_token=([^&]+)" )
+        oauth_token_secret = result:match( "oauth_token_secret=([^&]+)" )
+
+        LrDialogs.message("tk = " .. oauth_token .. " tks " .. oauth_token_secret)
+
+    end )
+
+
+
 
     --[[
            1. Obtain a request token
