@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c69aa54b-b8eb-4d37-ae3c-e5e26739a138" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../lr_ffmpeg/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lr_smugmughelper/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.number" beforeDir="false" afterPath="$PROJECT_DIR$/build.number" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/BackupHelper.lrplugin/Info.lua" beforeDir="false" afterPath="$PROJECT_DIR$/build/BackupHelper.lrplugin/Info.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/BackupHelper.lrplugin/LR_BackupTask.lua" beforeDir="false" afterPath="$PROJECT_DIR$/build/BackupHelper.lrplugin/LR_BackupTask.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/BackupHelper.lrplugin.zip" beforeDir="false" afterPath="$PROJECT_DIR$/dist/BackupHelper.lrplugin.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Info.lua" beforeDir="false" afterPath="$PROJECT_DIR$/src/Info.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LR_BackupTask.lua" beforeDir="false" afterPath="$PROJECT_DIR$/src/LR_BackupTask.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lr_ffmpeg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_ffmpeg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_smugmughelper/.idea/lr_flickrhelper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_smugmughelper/.idea/lr_smugmughelper.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_smugmughelper/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_smugmughelper/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lr_smugmughelper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_smugmughelper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_smugmughelper/build.number" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_smugmughelper/build.number" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_smugmughelper/build/SmugMugHelper.lrplugin/Info.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_smugmughelper/build/SmugMugHelper.lrplugin/Info.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_smugmughelper/build/SmugMugHelper.lrplugin/UpdateSmugMugMetadata.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_smugmughelper/build/SmugMugHelper.lrplugin/UpdateSmugMugMetadata.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_smugmughelper/dist/SmugMugHelper.lrplugin.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_smugmughelper/dist/SmugMugHelper.lrplugin.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_smugmughelper/src/Info.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_smugmughelper/src/Info.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_smugmughelper/src/UpdateSmugMugMetadata.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_smugmughelper/src/UpdateSmugMugMetadata.lua" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +30,12 @@
     <session id="-1619799360">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,7 +55,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Lua" value="1967" />
+          <entry key="Lua" value="2074" />
           <entry key="PLAIN_TEXT" value="270" />
           <entry key="XML" value="6" />
         </counts>
@@ -49,7 +63,7 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="lua" value="2236" />
+          <entry key="lua" value="2343" />
           <entry key="number" value="1" />
           <entry key="xml" value="6" />
         </counts>
@@ -70,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LR_BackupTask.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="140" column="58" lean-forward="true" selection-start-line="140" selection-start-column="58" selection-end-line="140" selection-end-column="58" />
+            <state relative-caret-position="15">
+              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -93,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LR_BackupServiceProvider.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
+            <state relative-caret-position="315">
               <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
             </state>
           </provider>
@@ -161,7 +175,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="2663" />
-    <option name="y" value="195" />
+    <option name="y" value="189" />
     <option name="width" value="1801" />
     <option name="height" value="782" />
   </component>
@@ -171,7 +185,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,10 +206,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542115324087" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542616861184" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -327,7 +341,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2663" y="195" width="1801" height="782" extended-state="0" />
+    <frame x="2663" y="189" width="1801" height="782" extended-state="0" />
     <layout>
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
@@ -335,7 +349,7 @@
       <window_info id="Image Layers" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Nl-Palette" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.18305856" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.18476407" />
       <window_info id="Structure" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
@@ -440,6 +454,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Info.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/lr_backup.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -450,10 +471,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Info.lua">
+    <entry file="file://$PROJECT_DIR$/src/LR_BackupServiceProvider.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="315">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -464,17 +485,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LR_BackupServiceProvider.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LR_BackupTask.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="140" column="58" lean-forward="true" selection-start-line="140" selection-start-column="58" selection-end-line="140" selection-end-column="58" />
+        <state relative-caret-position="15">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
         </state>
       </provider>
     </entry>

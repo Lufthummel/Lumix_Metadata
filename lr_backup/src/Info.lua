@@ -24,6 +24,6 @@ return {
 		file = 'LR_BackupServiceProvider.lua',
 	},
 
-	VERSION = { major=0, minor=1, revision=0, build=78}
+	VERSION = { major=0, minor=1, revision=0, build=83}
 
 }

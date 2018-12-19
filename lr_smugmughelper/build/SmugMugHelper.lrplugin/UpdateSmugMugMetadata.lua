@@ -19,7 +19,7 @@ local LrProgressScope = import 'LrProgressScope'
 local LrFunctionContext = import 'LrFunctionContext'
 
 require 'SmugMugAPI'
-require 'Inspect'
+-- require 'Inspect'
 
 local myLogger = LrLogger( 'libraryLogger' )
 myLogger:enable( "logfile" ) -- or "logfile"

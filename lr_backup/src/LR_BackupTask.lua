@@ -12,6 +12,7 @@ animal or human being do what you want with this software
 
 -- Lightroom API
 local LrPathUtils = import 'LrPathUtils'
+--local LrCollection = import 'LrCollection'
 local LrDate = import 'LrDate'
 local LrFileUtils = import 'LrFileUtils'
 local LrErrors = import 'LrErrors'
@@ -46,6 +47,10 @@ function LR_BackupTask.processRenderedPhotos( functionContext, exportContext )
 					}
 
     local path = exportParams.path
+
+    --local collectionName = LrCollection.getName()
+    --myLogger:trace("collection name")
+    --myLogger:trace(collectionName)
 	
 	-- Ensure target directory exists.
 	

@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04c6ee0d-7e0f-4a7d-b001-e1a7d7b18498" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lr_smugmughelper/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_backup/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_backup/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_backup/build.number" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_backup/build.number" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_backup/build/BackupHelper.lrplugin/Info.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_backup/build/BackupHelper.lrplugin/Info.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_backup/build/BackupHelper.lrplugin/LR_BackupTask.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_backup/build/BackupHelper.lrplugin/LR_BackupTask.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_backup/dist/BackupHelper.lrplugin.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_backup/dist/BackupHelper.lrplugin.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_backup/src/Info.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_backup/src/Info.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_backup/src/LR_BackupTask.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_backup/src/LR_BackupTask.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lr_smugmughelper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_smugmughelper/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="lr_ffmpeg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +27,7 @@
     <session id="-903948656">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.opened" value="3" />
@@ -131,7 +135,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="51" />
     <option name="y" value="116" />
     <option name="width" value="2394" />
@@ -313,7 +317,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="116" width="2394" height="1204" extended-state="1" />
+    <frame x="51" y="116" width="2394" height="1204" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Nl-Palette" order="1" />

@@ -45,6 +45,6 @@ return {
 	LrMetadataProvider = 'SmugMugMetadataDefinitionFile.lua',
 	URLHandler = "URLHandler.lua",
 
-	VERSION = { major=0, minor=1, revision=1, build=67}
+	VERSION = { major=0, minor=1, revision=1, build=68}
 
 }
