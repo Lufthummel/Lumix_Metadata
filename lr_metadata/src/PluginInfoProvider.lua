@@ -9,5 +9,5 @@
 require 'PluginManager'
 
 return {
-    sectionsForTopOfDialog = PluginManager.sectionsForTopOfDialog,
+sectionsForTopOfDialog = PluginManager.sectionsForTopOfDialog,
 }

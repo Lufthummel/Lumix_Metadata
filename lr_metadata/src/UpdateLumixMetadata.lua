@@ -17,6 +17,7 @@ local LrTasks = import 'LrTasks'
 local LrProgressScope = import 'LrProgressScope'
 local LrFunctionContext = import 'LrFunctionContext'
 local LrErrors = import 'LrErrors'
+local LrFileUtils = import 'LrFileUtils'
 
 local myLogger = LrLogger( 'libraryLogger' )
 myLogger:enable( "print" ) -- or "logfile"
@@ -75,11 +76,14 @@ function UpdateLumixMetadata.getPhotos()
             path = photo:getRawMetadata("path")
             fname = photo:getFormattedMetadata("fileName")
 
-            -- myLogger:trace( "-> "..  path .. " + " .. fname )
+            myLogger:trace( "-> "..  path .. " + " .. fname )
             tmpmeta = exiftool(path)
+            filesize = LrFileUtils.fileAttributes(path).fileSize
+            filesize = filesize / (1024 * 1024)
+            -- myLogger:trace( "-> filesize" .. toString(filesize))
 
             catalog:withWriteAccessDo( "UpdateMetada", function( context )
-                UpdateLumixMetadata.setMetadata(tmpmeta, photo)
+                UpdateLumixMetadata.setMetadata(tmpmeta, photo, filesize)
                 myLogger:trace( "-> updated")
             end)
             myLogger:trace( "updated" .. t)
@@ -97,7 +101,7 @@ function JSON:onDecodeError(message, text, location, etc)
 end
 
 
-function UpdateLumixMetadata.setMetadata(m,p)
+function UpdateLumixMetadata.setMetadata(m,p, filesize)
 
     myLogger:trace( "-> setMetadata")
     local photo = p
@@ -148,7 +152,12 @@ function UpdateLumixMetadata.setMetadata(m,p)
             if (meta["ImageStabilization"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"imagestabilization",tostring(meta["ImageStabilization"])) end
             if (meta["TimeSincePowerOn"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"timesincepoweron",tostring(meta["TimeSincePowerOn"])) end
 
-
+            -- added october 2019
+            if (meta["BurstMode"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"burstmode",tostring(meta["BurstMode"])) end
+            if (meta["MacroMode"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"macromode",tostring(meta["MacroMode"])) end
+            if (meta["SequenceNumber"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"sequencenumber",tostring(meta["SequenceNumber"])) end
+            if (meta["TimeLapseShotNumber"] ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"timelapsenumber",tostring(meta["TimeLapseShotNumber"])) end
+            if (filesize ~= nil ) then photo:setPropertyForPlugin(_PLUGIN,"filesize", string.format("%0.2f", filesize) .. " MB") end
 
     end
 end

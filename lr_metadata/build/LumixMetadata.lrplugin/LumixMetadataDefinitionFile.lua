@@ -126,6 +126,37 @@ return {
 		},
 
 		{
+			id = 'burstmode',
+			title = LOC "$$$/LumixMetadata/BurstMode=Burst Mode",
+			dataType = 'string',
+			searchable = true,
+			browsable = true,
+			version = 1,
+
+		},
+
+		{
+			id = 'macromode',
+			title = LOC "$$$/LumixMetadata/MacroMode=Macro Mode",
+			dataType = 'string',
+			searchable = true,
+			browsable = true,
+			version = 1,
+
+		},
+
+		{
+			id = 'sequencenumber',
+			title = LOC "$$$/LumixMetadata/Sequence=Sequence#",
+			dataType = 'string',
+			searchable = true,
+			browsable = true,
+			version = 1,
+
+		},
+
+
+		{
 			id = 'shutterType',
 			title = LOC "$$$/LumixMetadata/ShutterType=Shutter Type",
 			dataType = 'string',
@@ -255,8 +286,28 @@ return {
 
 		},
 
+		{
+			id = 'timelapsenumber',
+			title = LOC "$$$/LumixMetadata/TimeLapse=TimeLapse#",
+			dataType = 'string',
+			searchable = true,
+			browsable = true,
+			version = 1,
+
+		},
+
+		{
+			id = 'filesize',
+			title = LOC "$$$/LumixMetadata/Filesize=Filesize#",
+			dataType = 'string',
+			searchable = true,
+			browsable = true,
+			version = 1,
+
+		},
+
 	},
 	
-	schemaVersion = 2,
+	schemaVersion = 3,
 
 }
