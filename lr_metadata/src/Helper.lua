@@ -25,7 +25,7 @@ Hope it is useful.
 local LrTasks = import "LrTasks"
 local LrLogger = import 'LrLogger'
 local prefs = import 'LrPrefs'.prefsForPlugin()
-
+local LrFileUtils = import 'LrFileUtils'
 local myLogger = LrLogger( 'libraryLogger' )
 myLogger:enable( "print" ) -- or "logfile"
 
@@ -40,12 +40,15 @@ end
 
 
 function readFile(file)
-    local f = io.open(file, "rb")
-    local s = f:read("*all")
-    f:close()
-    myLogger:trace( "read Json file: " .. s  )
-    return s
-
+    if LrFileUtils.exists(file ) then
+        local f = io.open(file, "rb")
+        local s = f:read("*all")
+        f:close()
+        myLogger:trace( "read Json file: " .. s  )
+        return s
+    else
+        return nil
+    end
 end
 
 

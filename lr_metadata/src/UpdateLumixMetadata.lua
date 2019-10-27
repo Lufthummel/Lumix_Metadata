@@ -27,6 +27,11 @@ local updateProgress = {}
 
 UpdateLumixMetadata = {}
 
+function round(num, numDecimalPlaces)
+    local mult = 10^(numDecimalPlaces or 0)
+    return math.floor(num * mult + 0.5) / mult
+end
+
 function UpdateLumixMetadata.showUpdateDialog()
     -- body of function
     -- LrDialogs.message( "Update Lumix Metadata", "Hello World!", "info" )
@@ -78,16 +83,22 @@ function UpdateLumixMetadata.getPhotos()
 
             myLogger:trace( "-> "..  path .. " + " .. fname )
             tmpmeta = exiftool(path)
-            filesize = LrFileUtils.fileAttributes(path).fileSize
-            filesize = filesize / (1024 * 1024)
-            -- myLogger:trace( "-> filesize" .. toString(filesize))
+            if tmpmeta ~= nil then
+                filesize = LrFileUtils.fileAttributes(path).fileSize
+                filesize = filesize / (1024 * 1024)
+                rawFZ = round(filesize,2)
 
-            catalog:withWriteAccessDo( "UpdateMetada", function( context )
-                UpdateLumixMetadata.setMetadata(tmpmeta, photo, filesize)
-                myLogger:trace( "-> updated")
-            end)
-            myLogger:trace( "updated" .. t)
+                -- myLogger:trace( "-> filesize" .. toString(filesize))
+
+                catalog:withWriteAccessDo( "UpdateMetada", function( context )
+                    UpdateLumixMetadata.setMetadata(tmpmeta, photo, rawFZ)
+                    myLogger:trace( "-> updated")
+                end)
+                myLogger:trace( "updated" .. t)
+            end
             updateProgress:setPortionComplete(t, totalphotos)
+
+
         end
         updateProgress:done()
     end)

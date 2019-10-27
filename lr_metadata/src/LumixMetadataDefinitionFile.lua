@@ -38,6 +38,7 @@ return {
 			id = 'internalSerialNumber',
 			title = LOC "$$$/LumixMetadata/InternalSerialNumberr=Camera Serial Number",
 			dataType = 'string',
+			readOnly = true,
 			searchable = true,
 			browsable = true,
 			version = 1,
@@ -60,6 +61,7 @@ return {
 			dataType = 'string',
 			searchable = true,
 			browsable = true,
+			readOnly = true,
 			version = 1,
 
 		},
@@ -149,9 +151,9 @@ return {
 			id = 'sequencenumber',
 			title = LOC "$$$/LumixMetadata/Sequence=Sequence#",
 			dataType = 'string',
-			searchable = true,
-			browsable = true,
-			version = 1,
+			searchable = false,
+			browsable = false,
+			version = 2,
 
 		},
 
@@ -290,9 +292,9 @@ return {
 			id = 'timelapsenumber',
 			title = LOC "$$$/LumixMetadata/TimeLapse=TimeLapse#",
 			dataType = 'string',
-			searchable = true,
-			browsable = true,
-			version = 1,
+			searchable = false,
+			browsable = false,
+			version = 2,
 
 		},
 
@@ -300,6 +302,7 @@ return {
 			id = 'filesize',
 			title = LOC "$$$/LumixMetadata/Filesize=Filesize#",
 			dataType = 'string',
+			readOnly = true,
 			searchable = true,
 			browsable = true,
 			version = 1,
@@ -308,6 +311,6 @@ return {
 
 	},
 	
-	schemaVersion = 3,
+	schemaVersion = 4,
 
 }
