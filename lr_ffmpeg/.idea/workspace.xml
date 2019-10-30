@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04c6ee0d-7e0f-4a7d-b001-e1a7d7b18498" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../lr_hfexporter/src/Export2HFMenuAction.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lr_hfexporter/src/HFExportServiceProvider.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lr_hfexporter/src/Info.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lr_hfexporter/src/PluginInfoProvider.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lr_hfexporter/src/PluginInit.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lr_hfexporter/src/PluginManager.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lr_metadata/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lr_backup/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_backup/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lr_metadata/src/PluginInfoProvider.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_metadata/src/PluginInfoProvider.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lr_smugmughelper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_smugmughelper/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lr_devmeta/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lr_devmeta/.idea/lr_devmeta.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lr_devmeta/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lr_devmeta/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lr_devmeta/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_flickrhelper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_flickrhelper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lr_metadata/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lr_metadata/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="lr_ffmpeg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ImportVideo.lua">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3285">
@@ -86,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PluginManager.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="109" column="35" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="35" />
+            <state relative-caret-position="854">
+              <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -142,7 +137,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,6 +154,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,7 +313,7 @@
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Nl-Palette" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.26730564" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.26996806" />
       <window_info id="Structure" order="3" weight="0.25" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
@@ -437,13 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ImportVideo.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3285">
-          <caret line="219" column="32" selection-start-line="217" selection-start-column="28" selection-end-line="219" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Helper.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -467,8 +455,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PluginManager.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="109" column="35" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="35" />
+        <state relative-caret-position="854">
+          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ImportVideo.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3285">
+          <caret line="219" column="32" selection-start-line="217" selection-start-column="28" selection-end-line="219" selection-end-column="32" />
         </state>
       </provider>
     </entry>

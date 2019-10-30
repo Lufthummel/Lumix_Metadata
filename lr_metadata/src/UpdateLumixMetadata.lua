@@ -60,7 +60,8 @@ function UpdateLumixMetadata.getPhotos()
 
     myLogger:trace( "-> getPhotos")
     LrTasks.startAsyncTask(function ()
-        local photos = catalog:getMultipleSelectedOrAllPhotos()
+        -- local photos = catalog:getMultipleSelectedOrAllPhotos()
+        local photos = catalog:getTargetPhotos()
         local totalphotos = #photos
 
 
